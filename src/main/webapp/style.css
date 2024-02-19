@@ -1,0 +1,132 @@
+/*Configuración general para eliminar el padding y margin de la página completa*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Colores*/
+:root {
+    --azul-header: rgb(0, 41, 88);
+    --azul-navegador: rgb(0,80,173);
+    --azul-main: rgb(132,169,207);
+    --blanco: rgb(255,255,255);
+}
+
+/*Header*/
+header{
+    width: 100%;
+    height: 77px;
+    background-color: var(--azul-header);
+}
+.contenedorHeader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    gap: 2%;
+}
+.headerItem{
+    list-style: none;
+}
+.headerItem a{
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    text-decoration: none;
+    color: var(--blanco);
+}
+.icons{
+    width: 40px;
+    height: 40px;
+}
+/*Navegador*/
+nav{
+    width: 100%;
+    height: 120px;
+    background-color: var(--azul-navegador);
+    display: flex;
+    align-items: center;
+}
+.contenedorNavegador{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3%;
+}
+.navegadorItem{
+    list-style: none;
+}
+.navegadorItem a{
+    display: flex;
+    align-items: center;
+    gap: 4%;
+    text-decoration: none;
+    color: var(--blanco);
+}
+.navegadorItem img{
+    width: 100%;
+    height: 100%;
+}
+
+/*Slider Gallery*/
+.slider{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.slider img{
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+/*Main*/
+main{
+    width: 100%;
+    height: 800px;
+    color: var(--azul-header);
+    background-color: var(--azul-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+}
+main h2{
+    margin-top: 80px;
+}
+.serviciosContenedor{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+.servicioItem{
+    width: 33.33%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
+}
+.cuadrado{
+    width: 300px;
+    height: 300px;
+    background-color: var(--blanco);
+    border-color: var(--blanco);
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+}
+.textoContenedor{
+    width: 50%;
+    height: 50%;
+    word-wrap: break-word;
+}
