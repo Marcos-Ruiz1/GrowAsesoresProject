@@ -4,7 +4,11 @@
     margin: 0px;
     padding: 0px;
 }
-
+/*Conversión para utilizar rem en lugar de px*/
+/*1 rem = 10px*/ /*1.6rem  = 16px*/
+html{
+    font-size: 62.5%;
+}
 /*Colores*/
 :root {
     --azul-header: rgb(0, 41, 88);
@@ -13,13 +17,19 @@
     --blanco: rgb(255,255,255);
 }
 
+/*Eliminación del scroll horizontal de la página*/
+body{
+    overflow-x: hidden;
+}
+
 /*Header*/
 header{
     width: 100%;
-    height: 77px;
+    height: 10vh;
     background-color: var(--azul-header);
 }
 .contenedorHeader{
+    padding-right: 3%;
     width: 100%;
     height: 100%;
     display: flex;
@@ -29,9 +39,11 @@ header{
     gap: 2%;
 }
 .headerItem{
+    transition: transform 0.3s ease;
     list-style: none;
 }
 .headerItem a{
+    font-size: 1.7rem;
     display: flex;
     align-items: center;
     gap: 4%;
@@ -39,19 +51,29 @@ header{
     color: var(--blanco);
 }
 .icons{
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
 }
+
+.headerItem:hover{
+    transform: scale(1.1); /* Escalamos el elemento en un 10% */
+    border-style: solid;
+    border-color: var(--azul-main);
+    border-radius: 10%;
+    background-color: var(--azul-main);
+}
+
 /*Navegador*/
 nav{
     width: 100%;
-    height: 120px;
+    height: 15vh;
     background-color: var(--azul-navegador);
     display: flex;
     align-items: center;
 }
 .contenedorNavegador{
-    width: 100%;
+    padding-right: 3%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -59,10 +81,22 @@ nav{
     align-items: center;
     gap: 3%;
 }
+.contenedorLogo{
+    margin-left: 3%;
+    width: 20%;
+    height: 100%;
+}
+.contenedorLogo img{
+    object-fit: cover;
+    width: 15rem;
+    height: 10rem;
+}
 .navegadorItem{
+    transition: transform 0.3s ease; /* Transición para la propiedad 'transform' con duración de 0.3 segundos y función 'ease' */
     list-style: none;
 }
 .navegadorItem a{
+    font-size: 1.7rem;
     display: flex;
     align-items: center;
     gap: 4%;
@@ -74,11 +108,19 @@ nav{
     height: 100%;
 }
 
+.navegadorItem:hover{
+    transform: scale(1.1); /* Escalamos el elemento en un 10% */
+    border-style: solid;
+    border-color: var(--azul-main);
+    border-radius: 10%;
+    background-color: var(--azul-main);
+}
+
 /*Slider Gallery*/
 .slider{
     display: flex;
     width: 100%;
-    height: 400px;
+    height: 55vh;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
@@ -91,7 +133,7 @@ nav{
 /*Main*/
 main{
     width: 100%;
-    height: 800px;
+    height: auto;
     color: var(--azul-header);
     background-color: var(--azul-main);
     display: flex;
@@ -100,25 +142,28 @@ main{
     gap: 10%;
 }
 main h2{
-    margin-top: 80px;
+    margin-top: 3.5%;
 }
 .serviciosContenedor{
     width: 100%;
-    height: fit-content;
+    height: auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 3%;
 }
 .servicioItem{
-    width: 33.33%;
-    height: 600px;
+    min-width: 25rem;
+    max-width: 30rem;
+    height: 40rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3%;
 }
 .cuadrado{
-    width: 300px;
-    height: 300px;
+    width: 30rem;
+    height: 30rem;
     background-color: var(--blanco);
     border-color: var(--blanco);
     border-radius: 5%;
@@ -129,4 +174,22 @@ main h2{
     width: 50%;
     height: 50%;
     word-wrap: break-word;
+}
+
+/*Footer*/
+footer{
+    background-color: var(--blanco);
+    width: 100%;
+    height: 10vh;
+}
+.contenedorFooter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3%;
+}
+.footerItem{
+    list-style: none;
 }
