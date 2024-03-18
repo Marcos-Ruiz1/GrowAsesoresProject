@@ -1,0 +1,100 @@
+.navbar {
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+}
+
+body,
+.navbar,
+.navbar-expand-lg .navbar-nav .nav-link,
+.container text-center {
+    color: white;
+}
+
+.blue-bg {
+    background-color: #8DA4F5; /* Define el color de fondo azul */
+    /*padding: 20px; /* Opcional: Añade espacio interno al contenedor */
+}
+.main-title-container{
+    background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+    -webkit-background-clip: text;
+    padding: 30px;
+    color: transparent;
+    font-weight: bold;
+    text-align: center;
+    
+
+    
+}
+
+
+
+.services-container {
+    
+    display: flex;
+    background: linear-gradient(to right, #FFFFFF,#C9D2FF, #8dcaff, #788eff );
+}
+
+
+
+
+.services-container div {
+
+    
+
+    padding: 80px;
+    margin-left: 80px;
+    margin-top: 40px;
+    margin-right: 80px;
+    margin-bottom: 40px;
+    height: 400px;
+    width: 450px;
+    
+   
+    background-size: 750px;
+ 
+
+
+}
+
+/*
+    styles for the services divs
+*/
+.service-1{
+
+    background: linear-gradient(to right, #acb9f3, #415FF5, #594bd8);
+}
+
+.service-2{
+
+    background: linear-gradient(to right, #acb9f3, #415FF5, #594bd8);
+}
+.service-3{
+
+    background: linear-gradient(to right, #acb9f3, #415FF5, #594bd8);
+}
+/*
+    styles for the effects on the hover of services divs
+*/
+.service-1:hover {
+
+    background: linear-gradient(to right, #acb9f3, #415FF5, #594bd8);
+    padding: 85px;
+}
+.service-2:hover {
+
+    background: linear-gradient(to right, #acb9f3, #415FF5, #594bd8);
+    padding: 85px;
+    
+}
+.service-3:hover {
+
+    background: linear-gradient(to right, #acb9f3, #415FF5, #594bd8);
+    padding: 85px;
+    
+}
+.services-container div h1{
+    font-size: 35px;
+    text-align: center;
+    color: white;
+}
+
+
