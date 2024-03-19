@@ -1,0 +1,26 @@
+.navbar {
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+}
+
+body,
+.navbar,
+.navbar-expand-lg .navbar-nav .nav-link,
+.container text-center {
+    color: white;
+}
+
+
+.blue-bg {
+    background-color: #8DA4F5; /* Define el color de fondo azul */
+    /*padding: 20px; /* Opcional: Añade espacio interno al contenedor */
+}
+.card{
+    border-color: #8DA4F5;
+}
+.card-body{
+    background-color: #8DA4F5;
+}
+.customColor{
+    color: #2380C3;
+}
+

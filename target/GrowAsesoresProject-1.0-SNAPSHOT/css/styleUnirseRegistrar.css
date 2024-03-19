@@ -1,0 +1,173 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 18 mar. 2024, 20:05:17
+    Author     : xfs85
+*/
+
+.navbar {
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+ 
+}
+
+body,
+.navbar,
+.navbar-expand-lg .navbar-nav .nav-link,
+.container text-center{
+    color: white;
+}
+
+.leftColumn{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    margin-top: -20px;
+    float: left;
+    
+    
+}
+
+.leftColumn h2{
+    background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+   -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    margin: 20px;
+    margin-left: 25%;
+    margin-top: 60px;
+}
+
+
+
+.columns{
+
+}
+.rightColumn{
+    width: 50%;
+    height: 120%;
+    background-color: darkblue;
+    float: left;
+    
+}
+
+.rightColumn img{
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: linear-gradient(#000,rgba(0,0,0,0.2));
+}
+
+.form{
+    margin-left: 10%;
+    margin-top: 10%;
+    height: auto;
+}
+
+input[type="text"] {
+    width: 80%;
+    border: 1px solid #ccc; /* Cambia el grosor del borde y el color */
+    border-radius: 5px; /* Ajusta el radio de las esquinas si lo deseas */
+    padding: 5px; /* Ajusta el relleno interno */
+}
+input[type="email"] {
+    width: 80%;
+    border: 1px solid #ccc; /* Cambia el grosor del borde y el color */
+    border-radius: 5px; /* Ajusta el radio de las esquinas si lo deseas */
+    padding: 5px; /* Ajusta el relleno interno */
+}
+input[type="password"] {
+    width: 80%;
+    border: 1px solid #ccc; /* Cambia el grosor del borde y el color */
+    border-radius: 5px; /* Ajusta el radio de las esquinas si lo deseas */
+    padding: 5px; /* Ajusta el relleno interno */
+}
+
+/* Estilo para el foco del campo de texto */
+input[type="text"]:focus {
+    border-color: #007bff; /* Cambia el color del borde cuando el campo está enfocado */
+    /* Puedes ajustar otros estilos adicionales aquí */
+}
+input[type="email"]:focus {
+    border-color: #007bff; /* Cambia el color del borde cuando el campo está enfocado */
+    /* Puedes ajustar otros estilos adicionales aquí */
+}
+input[type="password"]:focus {
+    border-color: #007bff; /* Cambia el color del borde cuando el campo está enfocado */
+    /* Puedes ajustar otros estilos adicionales aquí */
+}
+
+input[type="text"]::placeholder {
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+}
+input[type="password"]::placeholder {
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+}
+input[type="email"]::placeholder {
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+}
+
+.separator{
+    background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+    width: 350px;
+    height: 5px;
+    margin-left: 150px;
+    margin-top: -10px;
+    position:absolute;
+   
+}
+
+.form h6{
+   background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+   -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;   
+}
+
+.btnCrear{
+    margin-left: 30%;
+ 
+}
+
+/* Estilo para el área de carga de archivos */
+.fileLabel {
+    display: block;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    color: gray;
+    border: 2px dashed #30BFBF;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fileLabel:hover {
+    background-color: #66D4D4;
+    color:white;
+    border: 2px dashed #30BFBF;
+}
+
+.fileInput {
+    display: none; /* Ocultar el input de archivo */
+}
+
+.btnCrear[type="submit"] {
+    background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btnCrear[type="submit"]:hover {
+    background: transparent;
+    border: 1px solid #30BFBF;
+    color: #30BFBF;
+}
+
