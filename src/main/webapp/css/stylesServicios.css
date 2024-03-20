@@ -18,6 +18,17 @@ body,
 
 }
 
+.navbar-nav a.nav-link {
+    transition: color 0.3s ease-in-out;
+  }
+
+  .navbar-nav a.nav-link:hover {
+   background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+   -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
 .blue-bg {
     background-color: #8DA4F5;
     
