@@ -28,11 +28,44 @@
               <a class="nav-link" href="unirseInicial.html">UNETE A NUESTRO EQUIPO</a>
               <a class="nav-link" href="#">CONTRATA UN SEGURO</a>
               <a class="nav-link" href="contacto.html">CONTACTANOS</a>
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal" href="#">Log in</a>
             </div>
           </div>
         </div>
     </nav>
 
+    <!--Modal para Log In-->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Iniciar Sesión</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i><input type="email" name="txtUser" value="" placeholder="Correo" maxlength="" required> <br><br>
+              <i class="fa fa-key" aria-hidden="true"></i><input type="password" name="txtClave" value="" placeholder="Password" required> <br> <br>
+              <button type="submit" class="btn btn-outline-primary">Iniciar Sesión</button>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
       <!--Carrusel de imagenes-->
       <div id="carouselExampleIndicators" class="carousel slide">
         
@@ -85,6 +118,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+<<<<<<< HEAD
          
     
       <div class="content-container-descripcion">
@@ -105,6 +139,17 @@
           </div>
 
 
+=======
+  </div>     
+
+    <!--Columnas Sección 2-->
+   <div class="columnasSeccion">
+      <div class="columnaItem">
+        <div class="contenedorImagen">
+          <img src="icons/Group.svg" alt="Icono Grupo" srcset="">
+        </div>
+        <span>UNETE COMO ASESOR</span>
+>>>>>>> a6154b3c186cc81a38e4e4fb79efc674d953a96f
       </div>
       <div class="content-container-mision">
 
@@ -140,15 +185,15 @@
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top customFooter">
       <div class="col-md-4 d-flex align-items-center">
         <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          <svg class="bi" width="30" height="24"><use xlink:href=""></use></svg>
         </a>
-        <span class="mb-3 mb-md-0 text-body-primary">© Grow Asesores, 2024</span>
+        <span class="mb-3 mb-md-0 text-body-primary" style="color: white;">© Grow Asesores, 2024</span>
       </div>
   
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="padding-right: 5%;">
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/p/GROW-Asesores-100063754531736/" target="_blank"><img src="icons/facebookIcon.svg" alt="facebook icon" srcset=""></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/growasesores/" target="_blank"><img src="icons/instragramIcon.svg" alt="instagram icon"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href=""><img src="icons/great-place-to-work-Icon.svg" alt="" srcset=""></a></li>
       </ul>
     </footer>
 </body>
