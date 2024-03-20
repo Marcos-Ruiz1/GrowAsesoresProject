@@ -68,14 +68,27 @@ body,
 @media(max-width: 800px){
 
     .banner-container h1{
-        font-size: 200%;
+        font-size: 300%;
+    }
+}
+
+@media(max-width: 600px){
+
+    .banner-container h1{
+        font-size: 250%;
     }
 }
 
 @media(max-width: 500px){
 
     .banner-container h1{
-        font-size: 100%;
+        font-size: 180%;
+    }
+}
+@media(max-width: 350px){
+
+    .banner-container h1{
+        font-size: 140%;
     }
 }
 
@@ -97,8 +110,7 @@ body,
     margin-bottom: 5%;  
     margin-left: auto;  
     margin-right: auto;
-    
-
+   
 }
 
 
@@ -107,7 +119,7 @@ body,
     text-align: center;
     color:#30BFBF;
     font-weight: lighter;
-    font-size: 200%;
+    font-size: 400%;
     width: 100%;
 }
 
@@ -119,8 +131,7 @@ body,
 
     width: 50%; 
     display: flex;
-    margin-left: auto;
-    margin-right: auto       ;
+      
     margin-bottom: 5%;
     
 }
@@ -132,42 +143,76 @@ body,
     padding: 10%;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    width: 100%;  
+    margin-left: 40% ;
+    margin-right: 40%;
+
     margin-bottom: 20%;
-    font-size: 300%;
+    font-size: 400%;
     font-weight: 600;
+    
 }
 
-    
+
 .container-btn input[type="submit"]:hover {
     border-color: #30BFBF;
     color: #30BFBF !important;
     background-color: transparent;
 }
 
+
+
 @media(max-width: 1400px){
 
-    .container-btn input[type="submit"] {
+    .postularse-container h1{
+      
+        font-size: 300%;
     
-        font-size: 230%;
     }
+
     
 }
 
-@media(max-width: 1000px){
-
+@media(max-width: 1900px){
     .container-btn input[type="submit"] {
     
-        font-size: 150%;
-    }
-    
+        font-size: 350%;
+ 
+        
+    }   
 }
+
+@media(max-width: 1700px){
+    .container-btn input[type="submit"] {
+        font-size: 300%;
+        
+    }   
+}
+@media(max-width: 1500px){
+    .container-btn input[type="submit"] {
+        font-size: 250%;
+        
+    }   
+}
+@media(max-width: 1200px){
+    .container-btn input[type="submit"] {
+        font-size: 200%;
+       
+        
+    }   
+
+}
+
+
 
 @media(max-width: 740px){
-
+    .postularse-container h1{
+      
+        font-size: 200%;
+    
+    }
     .container-btn input[type="submit"] {
     
-        font-size: 120%;
+        font-size: 140%;
     }
     
 }
@@ -176,7 +221,8 @@ body,
 
     .container-btn input[type="submit"] {
     
-        font-size: 80%;
+        font-size: 110%;
+      
     }
     
 }
@@ -186,7 +232,19 @@ body,
 
     .container-btn input[type="submit"] {
     
-        font-size: 60%;
+        font-size: 95%;
+       
+    }
+    
+}
+
+
+@media(max-width: 300px){
+
+    .container-btn input[type="submit"] {
+    
+        font-size: 95%;
+        margin-left: 20%;
     }
     
 }
