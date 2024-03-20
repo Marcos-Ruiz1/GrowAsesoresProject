@@ -174,3 +174,8 @@ body,
         font-size: 400px;
     }
 }
+
+/*Footer*/
+.customFooter{
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+}
