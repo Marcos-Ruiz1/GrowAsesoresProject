@@ -1,0 +1,249 @@
+.navbar {
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+ 
+}
+
+body,
+.navbar,
+.navbar-expand-lg .navbar-nav .nav-link,
+.container text-center{
+    color: white;
+}
+
+
+.banner-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+.group-img-1{
+    width: 100%;
+    height: 100%;
+
+}
+
+.banner-image{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    -webkit-mask-image: linear-gradient(#000,rgba(0,0,0,0));
+}
+
+.banner-information{
+    height: 20%;
+    margin-left: -100%;
+    margin-right: -65%;
+    margin-top: 55%;
+    width: 100%;
+}
+
+.banner-information img{
+    margin-right: -40%;
+}
+.logo{
+
+    width: 200px;
+    margin-left: 45%;
+  
+}
+
+.separator{
+    background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+    background: white;
+
+    box-shadow: 0px 1px 8px 0px gray; /* Aplica una sombra gris */
+}
+
+.team-title{
+    text-align: center;
+    text-shadow: gray 1px 0 10px;
+    color: white; /* Hace que el texto sea transparente */
+}
+
+.content-container{
+    
+    display:flex; 
+    height: 100%;
+    width: 100%;
+
+}
+
+.content-container div{
+    background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+    text-align: center;
+    margin: 3%; 
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 5%;
+}
+
+
+.image-contained{
+    
+    width: 100%;
+
+    height: fit-content;
+     -webkit-mask-image: linear-gradient(#000,rgba(0,0,0,0));
+      
+}
+
+.info-team{
+    margin-left: -15%;
+    text-align: center;
+ 
+    width: 100%;
+       
+}
+.content-container div, h1 {
+
+    color: white;
+    font-weight: bold; /* Establece el texto del h3 en negrita */
+}
+   
+.info-team h6 {
+    color: white;
+    font-weight: lighter; /* Establece el texto del h4 con un estilo más ligero */
+}
+
+
+.container-btn{
+    text-align: center;
+   
+    
+        width: 100%; 
+        padding: 10px;
+       
+        
+    }
+.container-btn input[type="submit"] {
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        color: white;
+        padding: 5%; 
+        cursor: pointer;
+        margin-top: auto;
+        margin-left: -20%;
+        margin-right: -20%;
+        transition: background-color 0.3s, color 0.3s;
+}
+    
+.container-btn input[type="submit"]:hover {
+        background-color: white;
+        color: #30BFBF;
+}       
+
+.content-1{
+    max-height: 800px;
+    min-height: 800px;
+}
+.content-2{
+    max-height: 800px;
+    min-height: 800px;
+}
+.content-3{
+    max-height: 800px;
+    min-height: 800px;
+}
+
+
+@media(max-width: 900px){
+
+    .content-container{
+    
+        display:block; 
+        margin-right: 3%;
+    }
+
+    .content-container div{
+       max-width: 50%;
+       margin-left: 25%;
+    }
+
+
+}
+
+@media(max-width: 1400px){
+    .logo{
+
+   
+        margin-left: 42%;
+     
+    }
+}
+
+@media(max-width: 950px){
+    .logo{
+
+   
+        margin-left: 39%;
+     
+    }
+    .content-1{
+        max-height: 600px;
+        min-height: 600px;
+    }
+    .content-2{
+        max-height: 600px;
+        min-height: 600px;
+    }
+    .content-3{
+        max-height: 600px;
+        min-height: 600px;
+    }
+    
+}
+
+@media(max-width: 735px){
+    .logo{
+
+   
+        margin-left: 35%;
+     
+    }
+
+}
+
+@media(max-width: 500px){
+    .logo{
+
+        width: 45%;
+        margin-left: 28%;
+        margin-bottom: -6%;
+    }
+    .container-btn input[type="submit"] {
+        margin-left: -35%;
+    }
+    .content-1{
+        max-height: 400px;
+        min-height: 400px;
+    }
+    .content-2{
+        max-height: 400px;
+        min-height: 400px;
+    }
+    .content-3{
+        max-height: 400px;
+        min-height: 400px;
+    }
+
+}
+
+@media(max-width: 350px){
+
+    .container-btn input[type="submit"] {
+        margin-left: -45%;
+    }
+    
+}
+
+
+
+.customFooter{
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+}
