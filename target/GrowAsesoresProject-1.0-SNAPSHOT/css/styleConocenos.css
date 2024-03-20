@@ -16,8 +16,20 @@ body,
 .navbar-expand-lg .navbar-nav .nav-link,
 .container text-center{
     color: white;
+    
 }
+ .navbar-nav a.nav-link {
+    transition: color 0.3s ease-in-out;
+  }
 
+  .navbar-nav a.nav-link:hover {
+   background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+   -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  
 .team-title {
     position: absolute;
     text-align: center;
@@ -76,11 +88,8 @@ body,
     
 }
 
-.logo-container{
-    
-}
 .image-contained{
-    
+    bord
     width: 100%;
     height: fit-content;
      -webkit-mask-image: linear-gradient(#000,rgba(0,0,0,0));
@@ -169,3 +178,8 @@ text-align: center;
     display: flex;
     flex-wrap: wrap;
 }
+
+.img-fluid{
+    margin-left: 25%;
+}
+
