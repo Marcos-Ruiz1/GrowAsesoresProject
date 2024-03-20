@@ -57,7 +57,7 @@ body,
 */
 
 .services-container {
-    
+
     display: flex;
     color: white;
     flex: 1 100%;
@@ -73,6 +73,7 @@ body,
     height: 100%;
     margin-right: 4%;
     margin-left: 4%;
+    border-radius: 8px;
 }
 
 .services-container div h1{
