@@ -97,3 +97,78 @@ body,
 .customFooter{
     background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
 }
+
+
+.content-container-descripcion {
+   
+    width: 100%;
+    height: 100%;
+}
+
+.content-container-mision {
+
+    width: 100%;
+    height: 100%;
+}
+
+.content-container-vision {
+
+    width: 100%;
+    height: 100%;
+}
+.content-container-descripcion div{
+
+    display: flex;
+    margin-right: 4%;
+    margin-left: 0%;
+    margin-top: 2%;
+
+}
+
+.content-container-mision div{
+    
+    display: flex;
+    margin-right: 4%;
+    margin-left: 0%;
+    margin-top: 2%;
+
+}
+
+.content-container-vision div{
+
+    display: flex;
+    margin-right: 4%;
+    margin-left: 0%;
+    margin-top: 2%;
+
+}
+
+.title{
+
+    width: 100%;
+    background-color: #2380C3;
+    color: white;
+    font-style: oblique;
+    
+}
+
+.title h1{
+
+    margin-left: 5%;
+    padding: 2%;
+}
+
+.description{
+    width: 100%;
+    padding: 3%;
+
+    
+}
+
+.description p{
+    color: #2168A6;
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 10%;
+}

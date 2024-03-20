@@ -131,7 +131,7 @@ body,
 
     width: 50%; 
     display: flex;
-      
+    margin-right: 100%;  
     margin-bottom: 5%;
     
 }
@@ -143,9 +143,8 @@ body,
     padding: 10%;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    margin-left: 40% ;
-    margin-right: 40%;
-
+    margin-left: 50% ;
+    margin-right: 50%;
     margin-bottom: 20%;
     font-size: 400%;
     font-weight: 600;
