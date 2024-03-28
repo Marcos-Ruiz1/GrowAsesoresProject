@@ -4,185 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleIndex.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>GrowAsesores</title>
+    <link rel="icon" href="imagenes/growiconoblanco-19.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Inicio | Grow </title>
 </head>
 <body>
-
-    <!--Navegador-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="imagenes/isotipoconsombragrow-21.png" alt="GrowAsesoresLogo"  class="img-fluid" width="90" height="30">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="index.html"></a>
-              <a class="nav-link" href="index.html">INICIO</a>
-              <a class="nav-link" href="servicios.html">SERVICIO</a>
-              <a class="nav-link" href="conocenos.html">CONÓCENOS</a>
-              <a class="nav-link" href="unirseInicial.html">UNETE A NUESTRO EQUIPO</a>
-
-              <a class="nav-link" href="contacto.html">CONTACTANOS</a>
-              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal" href="#">Login</a>
+    <header>
+        <nav class="navbar navbar-expand-lg header-navbar"
+         style="background-color: #1E1E1E;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="imagenes/imagotipogrow-10.png" alt="" width="200px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-options">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Conócenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Blog</a>
+                        </li>        
+            
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0 navbar-login-text">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicia sesión</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <button type="button" class="btn btn-primary">Únete</button>
+                    </form>
+                </div>
             </div>
-          </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!--Modal para Log In-->
-<div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Iniciar Sesión</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+    <section class="banner-container">
 
-      <!-- Modal body -->
-      <div class="modal-body">
-        <form>
-          <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i><input type="email" name="txtUser" value="" placeholder="Correo" maxlength="" required> <br><br>
-              <i class="fa fa-key" aria-hidden="true"></i><input type="password" name="txtClave" value="" placeholder="Password" required> <br> <br>
-              <button type="submit" class="btn btn-outline-primary">Iniciar Sesión</button>
-            </div>
-            <div class="col-md-3"></div>
-          </div>
-        </form>
-      </div>
+        <article class="value-presentation-text">
+            <h2>Únete y logra tu libertad financiera</h2>
+            <p>Seguridad, crecimiento y desarrollo. Todo en un mismo sitio. Vender seguros nunca fue tan increíble.</p>
+        </article>
 
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-      <!--Carrusel de imagenes-->
-      <div id="carouselExampleIndicators" class="carousel slide">
-        
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col p-0 position-relative">
-                <!-- Imagen izquierda con efecto de borrosidad -->
-                <img src="imagenes/GROW THREE 011.jpg" class="d-block w-100 blurred-image" alt="Grow Asesores trabajadores 1">
-                <h2 class="textImage">UN EQUIPO UNIDO, <br> UNA FUERZA IMPARABLE</h2>
-            </div>
-            <div class="col p-0">
-                <!-- Imagen derecha -->
-                <img src="imagenes/GROW THREE 011.jpg" class="d-block w-100" alt="Grow Asesores trabajadores 1">
-            </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row">
-            <div class="col p-0 position-relative">
-              <!-- Imagen izquierda con efecto de borrosidad -->
-              <img src="imagenes/GROW THREE 001.jpg" class="d-block w-100 blurred-image" alt="Grow Asesores trabajadores 2">
-              <h2 class="textImage">UNETE A LA<br>EXPERIENCIA GROW</h2>
-          </div>
-          <div class="col p-0">
-              <!-- Imagen derecha -->
-              <img src="imagenes/GROW THREE 001.jpg" class="d-block w-100" alt="Grow Asesores trabajadores 2">
-          </div>
-          </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col p-0 position-relative">
-            <!-- Imagen izquierda con efecto de borrosidad -->
-            <img src="imagenes/GROW THREE 020.jpg" class="d-block w-100 blurred-image" alt="Grow Asesores trabajadores 1">
-            <h2 class="textImage">AQUÍ, CADA VOZ CUENTA Y<br>CADA IDEA BRILLA</h2>
-        </div>
-        <div class="col p-0">
-            <!-- Imagen derecha -->
-            <img src="imagenes/GROW THREE 020.jpg" class="d-block w-100" alt="Grow Asesores trabajadores 1">
-        </div>
-        </div>
-    </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-         
     
-      <div class="content-container-descripcion">
+        <aside>
+            <img src="imagenes/familia.jpg" alt="banner-image" class="banner-image">
+        </aside> 
 
-      
-          <div class="title">
-            <h1>¿Quiénes somos?</h1>
-          
-          </div>
-
-          <div class="description">
-            <p> Somos una promotoría jovial de SMNYL comprometida en buscar la felicidad y
-               bienestar de los integrantes de nuestro equipo para apoyarlos a lograr su
-                crecimiento tanto personal como laboral. Buscando siempre ser una fuente de 
-                inspiración para llevarlos al éxito, esperando lo mejor, y listos para prevenir 
-                las adversidades de la vida.</p>
-
-          </div>
+    </section>
 
 
-      </div>
-      <div class="content-container-mision">
+    <section class="header-hook">
 
-          <div class="title">
-            <h1>¿Cuál es nuestra misión?</h1>
-          
-          </div>
+        <h1>Descubre lo que te ofrecemos</h1>
+        
+    </section>
 
-          <div class="description">
-            <p>Desarrollar a personas exitosas dentro de un ambiente positivo que los motive a superarse a sí mismos y
-               a lograr distintas metas, de igual manera convertirlos en empresarios dentro de la 
-              industria del seguro que se dediquen a brindarles seguridad y protección a sus clientes.</p>
+    <!-- Sección donde se muestran artículos de características de la compañía-->
+    <section class="products">
 
-        </div>
-      </div>
-      <div class="content-container-vision">
+        <article>
+            <h1>Seguridad</h1>
+            <p>En GROW nos preocupamos por los nuestros. Es por ello que te ofrecemos
+                el mejor ambiente de trabajo que podrás encontrar</p>
+        </article>
 
-          <div class="title">
-            <h1>¿Cuál es nuestra visión?</h1>
-          
-          </div>
+        <article>
+            <h1>Crecimiento</h1>
+            <p>Logra tu libertad económica con nosotros, 
+                tú pones el esfuerzo, nosotros el resto.</p>
+        </article>
 
-          <div class="description">
-            <p> Posicionarnos como la promotoría líder a nivel nacional dentro de 5 años y contar con el 
-              equipo de asesores más exitosos y capacitados dentro de la industria.</p>
+        <article>
+            <h1>Desarrollo</h1>
+            <p>Aprende en un equipo de trabajo de profesionales con
+                experiencia. Crece como persona mientras logras
+                tu libertad financiera.
+            </p>
+        </article>
+    </section>
+    <section class="header-hook">
 
-          </div>
+        <h1>Quién trabaja aquí habla por nosotros.</h1>
+        
+    </section>
+
+    <section class="testimonial-container">
+
+        <article class="testimonial-interaction-information">
+            <h1>Nuestros asesores nos respaldan</h1>
+            <p>Elige uno de estas características GROW para ver un testimonio de nuestros asesores</p>
+
+            <ul class="testimonial-menu">
+                <li class="testimonial-menu-amistad">Amistad</li>
+                <li class="testimonial-menu-libertad">Libertad</li>
+                <li class="testimonial-menu-crecimiento">Crecimiento</li>
+            </ul>
+        </article>
 
    
-      </div>
+        <aside class="testimonial-box">
+            <h2>Un testimonio para cada sentir.</h2>
+            <article class="amistad-testimonial-box">
+                "He hecho muchos amigos aquí en GROW, personas agradables con metas enormes de las que cada día aprendo"
+            </article>
+            <article class="libertad-testimonial-box">
+                "Estar aquí en grow me ha dado la libertad de conocer, de divertirme y de aprender"
+            </article>
+            <article class="crecimiento-testimonial-box">
+                "He crecido mucho aqui en GROW, siempre 
+                me han tratado de la mejor manera y estoy seguro que este es solo el comienzo del crecimiento"
+            </article>
+           
+        </aside>   
+    </section>
+ 
+    
 
-    <!--Footer-->
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top customFooter">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-          <svg class="bi" width="30" height="24"><use xlink:href=""></use></svg>
-        </a>
-        <span class="mb-3 mb-md-0 text-body-primary" style="color: white;">© Grow Asesores, 2024</span>
-      </div>
-  
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="padding-right: 5%;">
-        <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/p/GROW-Asesores-100063754531736/" target="_blank"><img src="icons/facebookIcon.svg" alt="facebook icon" srcset=""></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/growasesores/" target="_blank"><img src="icons/instragramIcon.svg" alt="instagram icon"></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href=""><img src="icons/great-place-to-work-Icon.svg" alt="" srcset=""></a></li>
-      </ul>
+    <footer>
+
+
     </footer>
+
 </body>
-</html> 
+</html>

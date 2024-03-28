@@ -1,170 +1,472 @@
-body,
-.navbar,
-.navbar-expand-lg .navbar-nav .nav-link,
-.container text-center {
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap'); 
+
+
+body{
+    margin: 0;
+    padding: 0 ;
 }
 
-.navbar-nav a.nav-link {
-    transition: color 0.3s ease-in-out;
-  }
-
-.navbar-nav a.nav-link:hover {
-   background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
-   -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.blue-bg {
-    background-color: #8DA4F5; /* Define el color de fondo azul */
-    /*padding: 20px; /* Opcional: Añade espacio interno al contenedor */
-}
-.card{
-    border-color: #8DA4F5;
-}
-.card-body{
-    background-color: #8DA4F5;
-}
-.customColor{
-    color: #2380C3;
-}
-  
-
-/*Sección de carrusel*/
-.blurred-image {
-    filter: blur(20px); /* Puedes ajustar el valor de borrosidad según lo desees */
-    
-}
-.textImage{
-    font-size: 133%;
-    color: white;
-    position: absolute;
-    top: 40%;
-    left: 22%;
-
-}
-/* Media query para tablet (620px o más) */
-@media (max-width: 620px) {
-    .textImage {
-        font-size: 90%;
-    }
-}
-
-/*Sección de columnas*/
-.columnasSeccion{
-    width: 100%;
-    min-height: 40vh;
-    background-color: #8DA4F5;
+/*
+    Configuración para el header
+*/
+header{
+    background-color: #1E1E1E;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    column-gap: 10%;
-}
-.columnaItem{
-    width: 200px;
-    height: 250px;
-    color: #2380C3;
-    font-weight: 800;
-    background-color: #8DA4F5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.contenedorImagen{
-    width: 140px;
-    height: 140px;
-    background-color: white;
-    border-radius: 5%;
-    border-color: #8DA4F5;
-    display: flex;
-    justify-content: center;
-}
-/* Media query para tablet (769px o más) */
-@media (max-width: 769px) {
-    .columnasSeccion {
-        flex-direction: column;
-    }
+    color:white; 
+    text-decoration: none;
+    height: 100%;
 }
 
-.customFooter{
-    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+/* Esconde el menú desplegable para móviles*/
+.dropdown-header-nav{
+    display: none;
 }
 
+/*
+    Configuraciones para el logo del header
+*/
 
-.content-container-descripcion {
+header > .img-container {
+   width: 100%;
    
-    width: 100%;
+}
+.img-container > img{
+    width: 80%;
+}
+
+/*
+    Configuración para el nav del header
+*/
+.header-nav{
+
+    width: 350%;
     height: 100%;
 }
 
-.content-container-mision {
+
+.btn-container{
+
+    width: 100%;
+ 
+}
+
+/*
+    Configuración de estilo para el botón del header
+*/
+.btn{
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 150%;
+	font-weight: bold;
+	background: #1577BE ;
+	width: 79%;
+    height: 70%;
+    margin-top: 3%;
+	padding: 4%;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white ;
+	border-radius: 4.5%;
+	cursor: pointer;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	border: none ;
+}
+
+/*
+    Configuración de acción para cuando se hace hover en el botón del header.
+*/
+
+.btn:hover, .btn:focus{
+
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+    color: #1577BE;
+    background-color: white;
+
+}
+
+
+.banner-btn-container{
 
     width: 100%;
     height: 100%;
+    
 }
 
-.content-container-vision {
 
-    width: 100%;
+.banner-btn{
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	background: #1577BE ;
+	width: 60%;
+    height: 70%;
+    margin-top: 3%;
+	padding: 4%;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white ;
+	border-radius: 4.5%;
+	cursor: pointer;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	border: none ;
+}
+
+.banner-btn:hover, .banner-btn:focus{
+
+	
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+    color: #1577BE;
+    background-color: white;
+}
+
+
+header{
     height: 100%;
-}
-.content-container-descripcion div{
-
-    display: flex;
-    margin-right: 4%;
-    margin-left: 0%;
-    margin-top: 2%;
-
+  
 }
 
-.content-container-mision div{
-    
-    display: flex;
-    margin-right: 4%;
-    margin-left: 0%;
-    margin-top: 2%;
-
-}
-
-.content-container-vision div{
-
-    display: flex;
-    margin-right: 4%;
-    margin-left: 0%;
-    margin-top: 2%;
-
-}
-
-.title{
-
+.d-flex button{
     width: 100%;
-    background-color: #2380C3;
-    color: white;
-    font-style: oblique;
-    
-}
-
-.title h1{
-
-    margin-left: 5%;
-    padding: 2%;
-}
-
-.description{
-    width: 100%;
-    padding: 3%;
-
-    
-}
-
-.description p{
-    color: #2168A6;
-    font-size: 200%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
     font-weight: bold;
-    margin-left: 10%;
+}
+.d-flex{
+    margin-right: -30%;
+    margin-left: 2%;
+    width: 15%;
+}
+
+.header-hook {
+
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.header-hook h1{
+ 
+    width: 100%;
+    color: #1577BE;
+    font-weight: bold;
+    font-family: 'Heebo', 'sans-serif'; 
+    font-size: 400%;
+    text-align: center;
+}
+
+
+/*
+    Configuración para container
+*/
+
+.banner-container {
+    display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+    width: 100%;
+    height: 100%;
+}
+
+.banner-container article,
+.banner-container aside {
+    text-align: center; /* Center align the content */
+}
+
+.banner-container aside {
+    margin-left: auto; /* Push it to the right */
+}
+
+.banner-image{
+    width: 100%;
+}
+
+.banner-container {
+    background-color: #1577BE;
+}
+
+
+.value-presentation-text  {
+    margin: 0 5% 0 5%;
+    
+}
+
+.value-presentation-text * {
+    padding: 5%;
+    color:white;
+}
+.value-presentation-text h2{
+    width: 100%;
+    font-family: 'Heebo', 'sans-serif';
+    font-size: 200%;
+    font-weight: bold;
+
+
+}
+
+.value-presentation-text p{
+    font-family: 'Heebo', 'sans-serif';
+    width: 100%;
+    font-size: 130%;
+
+}
+
+.navbar-options li a{
+    color:#1577BE;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.navbar-login-text li a{
+    color:#1577BE;
+    font-size: 200%;
+    font-weight: bold;
+    margin-right: 0%;
+}
+
+.navbar-options li a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.navbar-login-text li a:hover{
+    color:white;
+}
+
+.products{
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    font-family: 'Heebo', 'sans-serif';
+}
+
+.products article{
+    margin: 5%;
+
+}
+
+.products h1{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 200%;
+    color:#1577BE; 
+    
+}
+
+
+
+.products p{
+    font-weight: bold;
+    text-align: justify;
+    color: #1577BE;
+    font-size: 150%;
+    margin-top: 10%;
+}
+
+.container-division{
+    position: relative;
+}
+.custom-shape-divider-top-1711537867 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1711537867 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1711537867 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.testimonial-container{
+    display: flex;
+    align-items: center ;
+    margin: 10%; 
+}
+
+
+.testimonial-container aside {
+    width: 50%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    
+}
+
+.container-division{
+    margin-top: 20%;
+}
+
+.testimonial-box{
+    height: 100%;
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+    color:white;
+    font-family: 'Heebo', 'sans-serif';
+    border-radius: 4%;
+
+}
+.testimonial-interaction-information{
+    width: 50%;
+    font-family: 'Heebo', 'sans-serif';
+}
+
+
+
+.testimonial-menu{
+    display: block;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+.testimonial-interaction-information h1{
+    font-size: 200%;
+    color: #1577BE;
+}
+
+.testimonial-interaction-information p{
+    font-size: 120%;
+    font-style: italic;
+}
+
+.testimonial-interaction-information ul{
+    margin-top: 5%;
+}
+.testimonial-menu li{
+    text-decoration: none;
+    font-size: 150%;
+    margin-top: 1.5%;
+    font-weight: bold;
+}
+.testimonial-menu li:hover{
+    color:#2168A6;
+}
+
+
+.amistad-testimonial-box, 
+    .libertad-testimonial-box,
+        .crecimiento-testimonial-box{
+
+            display: none;
+            width: 100%;
+            padding: 10%;
+            background-color: tomato;
+    }
+
+.testimonial-menu-amistad:hover + .amistad-testimonial-box{
+    display: block;
+    
+}
+.testimonial-menu-crecimiento:hover + .crecimiento-testimonial-box{
+    display: block;
+}
+.testimonial-menu-libertad:hover + .libertad-testimonial-box{
+    display: block; 
+}
+
+/*
+    Media query para responsividad para Mobile devices (320px)
+*/
+@media screen and (min-width: 320px) and (max-width: 430px){
+
+
+    body{
+        margin:0px;
+        padding: 0px;
+        max-width: 100%;
+    }
+    /*
+        Configuracion para header
+    */
+
+
+  
+    .products{
+
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .products article{
+
+        margin: 20%; 
+    }
+    .products h1{
+        font-size: 200%;
+    }
+
+    .products p {
+        font-weight: 300;
+    }
+
+    .testimonial-container{
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-top: 25%;
+
+    }
+    .testimonial-container article{
+        width: 100%;
+  
+        text-align: center;
+    }
+
+    .testimonial-container aside{
+        width: 50%;
+        margin-left: 18%;
+        margin-top: 5%;
+        
+    }
+    .testimonial-container aside h2{
+        text-align: center;
+        
+    }
+}
+
+
+
+@media screen and (min-width: 768px){
+
+    body{
+        margin:0;
+        padding: 0;
+        
+    }
+
+    .custom-shape-divider-bottom-1711529400{
+      
+        margin-bottom: -15%;
+    }
+
+    .value-proposition-text{
+
+        max-width: 100%;
+        max-height: 50%;
+    }
+
+    .value-proposition-text h1{
+        font-size: 40%;
+    }
+}
+
+footer{
+    background-color: #1577BE;
+    height: 100px;
 }
