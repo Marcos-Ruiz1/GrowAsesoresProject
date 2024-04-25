@@ -1,37 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap'); 
 
-/* Nav Bar Stylying*/
-.navbar {
-    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
-
-}
 
 body{
+    margin: 0;
+    padding: 0 ;
+}
+
+/*
+    Configuración para el header
+*/
+header{
+    background-color: #1E1E1E;
+    display: flex;
+    align-items: center;
+    color:white; 
+    text-decoration: none;
+    height: 100%;
+}
+
+/* Esconde el menú desplegable para móviles*/
+.dropdown-header-nav{
+    display: none;
+}
+
+/*
+    Configuraciones para el logo del header
+*/
+
+header > .img-container {
+   width: 100%;
+   
+}
+.img-container > img{
+    width: 80%;
+}
+
+/*
+    Configuración para el nav del header
+*/
+.header-nav{
+
+    width: 350%;
+    height: 100%;
+}
+
+
+.btn-container{
+
     width: 100%;
-    
+ 
 }
 
-body,
-.navbar,
-.navbar-expand-lg .navbar-nav .nav-link,
-.container text-center {
-    color: white;
+/*
+    Configuración de estilo para el botón del header
+*/
+.btn{
 
+	font-family: 'Roboto', sans-serif;
+	font-size: 150%;
+	font-weight: bold;
+	background: #1577BE ;
+	width: 79%;
+    height: 70%;
+    margin-top: 3%;
+	padding: 4%;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white ;
+	border-radius: 4.5%;
+	cursor: pointer;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	border: none ;
 }
 
-.navbar-nav a.nav-link {
-    transition: color 0.3s ease-in-out;
-  }
 
-  .navbar-nav a.nav-link:hover {
-   background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
-   -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+
+header{
+    height: 100%;
   
-.blue-bg {
-    background-color: #8DA4F5;
-    
 }
 
 /*

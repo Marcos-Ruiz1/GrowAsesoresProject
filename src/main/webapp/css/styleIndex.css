@@ -75,57 +75,6 @@ header > .img-container {
 	border: none ;
 }
 
-/*
-    Configuración de acción para cuando se hace hover en el botón del header.
-*/
-
-.btn:hover, .btn:focus{
-
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-    color: #1577BE;
-    background-color: white;
-
-}
-
-
-.banner-btn-container{
-
-    width: 100%;
-    height: 100%;
-    
-}
-
-
-.banner-btn{
-
-	font-family: 'Roboto', sans-serif;
-	font-size: 80%;
-	font-weight: bold;
-	background: #1577BE ;
-	width: 60%;
-    height: 70%;
-    margin-top: 3%;
-	padding: 4%;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: white ;
-	border-radius: 4.5%;
-	cursor: pointer;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-	border: none ;
-}
-
-.banner-btn:hover, .banner-btn:focus{
-
-	
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
-    color: #1577BE;
-    background-color: white;
-}
 
 
 header{
@@ -133,29 +82,40 @@ header{
   
 }
 
-.d-flex button{
-    width: 100%;
-    font-size: 120%;
-    font-weight: bold;
-}
-.d-flex{
-    margin-right: -30%;
-    margin-left: 2%;
-    width: 15%;
-}
+
 
 .header-hook {
-
+    margin-top: 2%;
     width: 100%;
     height: 100%;
     align-items: center;
     display: flex;
 }
 
+
 .header-hook h1{
  
     width: 100%;
     color: #1577BE;
+    font-weight: bold;
+    font-family: 'Heebo', 'sans-serif'; 
+    font-size: 400%;
+    text-align: center;
+}
+
+.header-hook-2 {
+    margin-top: 2%;
+
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+.header-hook-2 h1{
+ 
+    width: 100%;
+    color: white;
+    background-color: #1577BE;
     font-weight: bold;
     font-family: 'Heebo', 'sans-serif'; 
     font-size: 400%;
@@ -243,9 +203,9 @@ header{
 
     width: 100%;
     height: 100%;
-
-    display: flex;
     font-family: 'Heebo', 'sans-serif';
+    display:flex;
+    margin-top: 4vh;
 }
 
 .products article{
@@ -262,123 +222,15 @@ header{
     
 }
 
-
-
 .products p{
     font-weight: bold;
-    text-align: justify;
+    text-align: center;
     color: #1577BE;
     font-size: 150%;
     margin-top: 10%;
 }
 
-.container-division{
-    position: relative;
-}
-.custom-shape-divider-top-1711537867 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
 
-.custom-shape-divider-top-1711537867 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.custom-shape-divider-top-1711537867 .shape-fill {
-    fill: #FFFFFF;
-}
-
-.testimonial-container{
-    display: flex;
-    align-items: center ;
-    margin: 10%; 
-}
-
-
-.testimonial-container aside {
-    width: 50%;
-    background-color: #f0f0f0;
-    padding: 20px;
-    
-}
-
-.container-division{
-    margin-top: 20%;
-}
-
-.testimonial-box{
-    height: 100%;
-    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
-    color:white;
-    font-family: 'Heebo', 'sans-serif';
-    border-radius: 4%;
-
-}
-.testimonial-interaction-information{
-    width: 50%;
-    font-family: 'Heebo', 'sans-serif';
-}
-
-
-
-.testimonial-menu{
-    display: block;
-    text-decoration: none;
-    list-style-type: none;
-
-}
-
-.testimonial-interaction-information h1{
-    font-size: 200%;
-    color: #1577BE;
-}
-
-.testimonial-interaction-information p{
-    font-size: 120%;
-    font-style: italic;
-}
-
-.testimonial-interaction-information ul{
-    margin-top: 5%;
-}
-.testimonial-menu li{
-    text-decoration: none;
-    font-size: 150%;
-    margin-top: 1.5%;
-    font-weight: bold;
-}
-.testimonial-menu li:hover{
-    color:#2168A6;
-}
-
-
-.amistad-testimonial-box, 
-    .libertad-testimonial-box,
-        .crecimiento-testimonial-box{
-
-            display: none;
-            width: 100%;
-            padding: 10%;
-            background-color: tomato;
-    }
-
-.testimonial-menu-amistad:hover + .amistad-testimonial-box{
-    display: block;
-    
-}
-.testimonial-menu-crecimiento:hover + .crecimiento-testimonial-box{
-    display: block;
-}
-.testimonial-menu-libertad:hover + .libertad-testimonial-box{
-    display: block; 
-}
 
 /*
     Media query para responsividad para Mobile devices (320px)
@@ -467,6 +319,77 @@ header{
 }
 
 footer{
-    background-color: #1577BE;
+    background-color: black;
     height: 100px;
+}
+
+
+.testimonio-container{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+
+    top: -2vh;
+    
+ 
+}
+
+.testimonio-video{
+
+    width: 50%;
+    height: 100%;
+
+    text-align: center;
+    float: left;
+    color:#1577BE;
+}
+
+.testimonio-video video{
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.testimonio-quote{
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    float: left;
+    
+}
+
+.testimonio-quote h1{
+    position: relative;
+    color: white;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    top: 30%;
+}.custom-shape-divider-top-1714073414 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1714073414 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 107px;
+}
+
+.custom-shape-divider-top-1714073414 .shape-fill {
+    fill: #1577BE;
+}
+
+header{
+    background-color: white;
 }
