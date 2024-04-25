@@ -10,35 +10,67 @@
     <body>
 
         <!--Navegador-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="icons/logoGrowAsesores.svg" alt="GrowAsesoresLogo"  class="img-fluid" width="90" height="72">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="index.html"></a>
-                        <a class="nav-link" href="index.html">INICIO</a>
-                        <a class="nav-link" href="servicios.html">SERVICIO</a>
-                        <a class="nav-link" href="conocenos.html">CONÓCENOS</a>
-                        <a class="nav-link" href="#">UNETE A NUESTRO EQUIPO</a>
-                        <a class="nav-link" href="#">CONTRATA UN SEGURO</a>
-                        <a class="nav-link" href="contacto.html">CONTACTANOS</a>
-                    </div>
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="imagenes/isotipoconsombragrow-21.png" alt="GrowAsesoresLogo"  class="img-fluid" width="90" height="30">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="index.html"></a>
+              <a class="nav-link" href="index.html">INICIO</a>
+              <a class="nav-link" href="servicios.html">SERVICIO</a>
+              <a class="nav-link" href="conocenos.html">CONÓCENOS</a>
+              <a class="nav-link" href="unirseInicial.html">UNETE A NUESTRO EQUIPO</a>
 
-        </nav>
+              <a class="nav-link" href="contacto.html">CONTACTANOS</a>
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal" href="#">Login</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <!--Modal para Log In-->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Iniciar Sesión</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i><input type="email" name="txtUser" value="" placeholder="Correo" maxlength="" required> <br><br>
+              <i class="fa fa-key" aria-hidden="true"></i><input type="password" name="txtClave" value="" placeholder="Password" required> <br> <br>
+              <button type="submit" class="btn btn-outline-primary">Iniciar Sesión</button>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
         <div class="columns">
+            
         <div class="leftColumn">
-
             <h2> Regístrate en GROW </h2>
-            <div class="separator">
-            </div>
-            <div class="form"> 
+            <div class="form">        
                 <form name="Formulario de Registro">
                     <input type="text" name="Nombre" value="" placeholder="Nombre(s)" required=""/> <br><br>
                     <input type="text" name="Nombre" value="" placeholder="Apellido Paterno" required=""/><br><br>
@@ -54,11 +86,8 @@
             
             </div>
         </div>
+        </div>
 
-        <div class="rightColumn">
-            <img src="imagenes/GROW THREE 018_websize.jpg" alt=""/>
-        </div>
-        </div>
-    </body>
+     
 </html>
 

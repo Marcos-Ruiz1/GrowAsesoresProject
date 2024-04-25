@@ -17,8 +17,12 @@ body,
 .navbar-expand-lg .navbar-nav .nav-link,
 .container text-center{
     color: white;
+    
 }
-
+body{
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
+   
+}
 .navbar-nav a.nav-link {
     transition: color 0.3s ease-in-out;
   }
@@ -31,13 +35,16 @@ body,
   }
   
 .leftColumn{
-    background-color: white;
+    background: white;
     width: 50%;
-    height: 100%;
-    margin-top: -20px;
-    float: left;
-    
-    
+    height: 120%;
+    margin-top: 0;
+    margin-left: 25%;
+   align-items: center;
+   position: absolute;
+   border-radius: 20px;
+   align-content: center;
+   
 }
 
 .leftColumn h2{
@@ -47,35 +54,32 @@ body,
     color: transparent;
     font-weight: bold;
     margin: 20px;
-    margin-left: 25%;
-    margin-top: 60px;
+    text-align: center;
+    margin-top: 2%;
+    opacity: 100%;
+   
+    
 }
 
 
 
 .columns{
-
-}
-.rightColumn{
-    width: 50%;
-    height: 120%;
-    background-color: darkblue;
-    float: left;
-    
-}
-
-.rightColumn img{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+     
     height: 100%;
-    -webkit-mask-image: linear-gradient(#000,rgba(0,0,0,0.2));
+
+
+}
+
+.columns img{
+  height: max-content;
+  width: 100%;  
 }
 
 .form{
-    margin-left: 10%;
-    margin-top: 10%;
+    margin-left: 15%;
+    margin-top: 5%;
     height: auto;
+    opacity: 100%;
 }
 
 input[type="text"] {
@@ -121,15 +125,6 @@ input[type="email"]::placeholder {
     opacity: 0.5; /* Ajusta la opacidad según sea necesario */
 }
 
-.separator{
-    background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
-    width: 350px;
-    height: 5px;
-    margin-left: 150px;
-    margin-top: -10px;
-    position:absolute;
-   
-}
 
 .form h6{
    background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
@@ -140,14 +135,13 @@ input[type="email"]::placeholder {
 }
 
 .btnCrear{
-    margin-left: 30%;
- 
+margin-left: 30%;
 }
 
 /* Estilo para el área de carga de archivos */
 .fileLabel {
     display: block;
-    width: 300px;
+    width: 80%;
     padding: 20px;
     background-color: white;
     color: gray;
@@ -184,3 +178,32 @@ input[type="email"]::placeholder {
     color: #30BFBF;
 }
 
+@media(max-width: 700px){
+    
+    .form{
+        display: block;
+        width: 85%;
+        
+    }
+    
+    .leftColumn{
+        margin-left: 0;
+        width: 100%;
+          
+    }
+    
+    .leftColumn h2{
+        margin-top: -10%;
+    }
+ 
+    .btnCrear{
+       
+    }
+}
+
+
+
+
+   
+   
+ 
