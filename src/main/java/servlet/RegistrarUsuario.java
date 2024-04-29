@@ -32,24 +32,7 @@ public class RegistrarUsuario extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        //Variables del formulario
-        String nombres = request.getParameter("Nombre");
-        String apellidoP = request.getParameter("ApellidoP");
-        String apellidoM = request.getParameter("ApellidoM");
-        String telefono = request.getParameter("Telefono");
-        String email = request.getParameter("Email");
-        String clave = request.getParameter("pass");
-        
-        
-        ConsultasUsuario sql = new ConsultasUsuario();
-        System.out.println("Objeto consultas creado con exito");
-        
-        if(sql.registrar(nombres, apellidoP, apellidoM, telefono, email, clave, false)){
-            response.sendRedirect("index.jsp");
-        }else{
-            response.sendRedirect("registrarse.jsp");
-        }
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -79,6 +62,25 @@ public class RegistrarUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+                //Variables del formulario
+        String nombres = request.getParameter("Nombre");
+        String apellidoP = request.getParameter("ApellidoP");
+        String apellidoM = request.getParameter("ApellidoM");
+        String telefono = request.getParameter("Telefono");
+        String email = request.getParameter("Email");
+        String clave = request.getParameter("pass");
+        
+        
+        ConsultasUsuario sql = new ConsultasUsuario();
+        System.out.println("Objeto consultas creado con exito");
+        
+        if(sql.registrar(nombres, apellidoP, apellidoM, telefono, email, clave, false)){
+            response.sendRedirect("index.jsp");
+        }else{
+            response.sendRedirect("registrarse.jsp");
+        }
+        
     }
 
     /**

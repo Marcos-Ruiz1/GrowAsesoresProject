@@ -20,7 +20,7 @@ public class ConsultaReservacion extends Conexion {
             pst = getConexion().prepareStatement(consulta);
             pst.setString(1, motivo);
             pst.setString(2, estado);
-    
+           
             // Ejecutar la consulta y verificar si se ha insertado correctamente
             return pst.executeUpdate() == 1;
         } catch (SQLException e) {

@@ -47,11 +47,11 @@ public class InicioSesion extends HttpServlet {
             if(sql.esAdmin(usuario, clave)){
                 //HttpSession objSesion = request.getSession(true);
                 //objSesion.setAttribute("usuario", usuario);
-                response.sendRedirect("usuarioReservacion.jsp");
+                response.sendRedirect("adminView.jsp");
             }else{
                 //HttpSession objSesion = request.getSession(true);
                 //objSesion.setAttribute("usuario", usuario);
-                response.sendRedirect("adminView.jsp");
+                response.sendRedirect("usuarioReservacion.jsp");
             }
             
         } else {
