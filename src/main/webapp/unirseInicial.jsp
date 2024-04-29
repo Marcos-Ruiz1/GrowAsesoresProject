@@ -1,15 +1,23 @@
+<%-- 
+    Document   : unirseInicial
+    Created on : 28 abr. 2024, 20:11:29
+    Author     : marco
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styleContacto.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>GrowAsesores</title>
-</head>
-<body>
+    <title>Unete a nuestro equipo</title>
 
+    <link rel="stylesheet" href="../webapp/css/styleUnirseInicial.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  </head>
+<body>
     <!--Navegador-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -67,49 +75,55 @@
 </div>
 </div>
 
-    <!--Formulario-->
-    <div class="container">
-        <div class="row" style="padding-top: 5%;">
-            <H3>CONTACTO</H3>
-            <div class="col-md-6">
-                <form>
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Omar" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="correo" class="form-label">Correo:</label>
-                        <input type="email" class="form-control" id="correo" placeholder="name@example.com" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensaje" class="form-label">Mensaje:</label>
-                        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <img src="imagenes/CONTACTAR.jpg" class="img-fluid" alt="Imagen">
-            </div>
-        </div>
+  <!--Container de banner-->
+  <div class="banner-container">
+
+    <div class= "banner-image-container">
+      <img src="imagenes/abraham-crece.jpg">
+
     </div>
-   
-      <!--Footer-->
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top customFooter">
-        <div class="col-md-4 d-flex align-items-center">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24"><use xlink:href=""></use></svg>
-          </a>
-          <span class="mb-3 mb-md-0 text-body-primary" style="color: white;">© Grow Asesores, 2024</span>
-        </div>
-    
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="padding-right: 5%;">
-          <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/p/GROW-Asesores-100063754531736/" target="_blank"><img src="icons/facebookIcon.svg" alt="facebook icon" srcset=""></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/growasesores/" target="_blank"><img src="icons/instragramIcon.svg" alt="instagram icon"></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href=""><img src="icons/great-place-to-work-Icon.svg" alt="" srcset=""></a></li>
-        </ul>
-      </footer>
+    <div class="banner-text-container">
+      <h1>
+        Tu oportunidad de crecer
+      </h1>
+
+    </div>
+
+  </div>  
+
+  <!--Container de contenido-->
+  <div class="content-container">
+    <!-- Container de postularse-->
+    <div class="postularse-container">
+      <h1>Se parte de la experiencia GROW</h1>
+    </div>
+
+    <!--Container del botón-->
+    <div class="container-btn">
+        <a href="registrarse.jsp">
+        <input type="submit" value="Únete a nuestra experiencia" name="btnConocer" style="color: white;" />
+      </a>
+      
+    </div>
+  </div>
+ 
+  <!--Footer-->
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top customFooter">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href=""></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-primary" style="color: white;">© Grow Asesores, 2024</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="padding-right: 5%;">
+      <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/p/GROW-Asesores-100063754531736/" target="_blank"><img src="icons/facebookIcon.svg" alt="facebook icon" srcset=""></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/growasesores/" target="_blank"><img src="icons/instragramIcon.svg" alt="instagram icon"></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href=""><img src="icons/great-place-to-work-Icon.svg" alt="" srcset=""></a></li>
+    </ul>
+  </footer>
+  
+
 </body>
-</html> 
+
+</html>

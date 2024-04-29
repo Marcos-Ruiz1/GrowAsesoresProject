@@ -1,3 +1,11 @@
+<%-- 
+    Document   : registrarse
+    Created on : 28 abr. 2024, 19:38:08
+    Author     : marco
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -91,4 +99,3 @@
 
      
 </html>
-

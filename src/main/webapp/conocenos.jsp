@@ -1,3 +1,10 @@
+<%-- 
+    Document   : conocenos
+    Created on : 28 abr. 2024, 20:08:17
+    Author     : marco
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +30,12 @@
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="index.html"></a>
-                    <a class="nav-link" href="index.html">INICIO</a>
-                    <a class="nav-link" href="servicios.html">SERVICIO</a>
-                    <a class="nav-link" href="conocenos.html">CONÓCENOS</a>
-                    <a class="nav-link" href="unirseInicial.html">UNETE A NUESTRO EQUIPO</a>
+                    <a class="nav-link" href="index.jsp">INICIO</a>
+                    <a class="nav-link" href="servicios.jsp">SERVICIO</a>
+                    <a class="nav-link" href="conocenos.jsp">CONÓCENOS</a>
+                    <a class="nav-link" href="unirseInicial.jsp">UNETE A NUESTRO EQUIPO</a>
                     <a class="nav-link" href="#">CONTRATA UN SEGURO</a>
-                    <a class="nav-link" href="contacto.html">CONTACTANOS</a>
+                    <a class="nav-link" href="contacto.jsp">CONTACTANOS</a>
                     <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal" href="#">Login</a>
                   
                 </div>

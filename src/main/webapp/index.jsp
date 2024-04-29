@@ -1,3 +1,10 @@
+<%-- 
+    Document   : index
+    Created on : 28 abr. 2024, 20:04:30
+    Author     : marco
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,13 +30,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-options">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="index.jsp">Inicio</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Servicios</a>
+                            <a class="nav-link" href="servicios.jsp">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Conócenos</a>
+                            <a class="nav-link" href="conocenos.jsp">Conócenos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">Blog</a>
