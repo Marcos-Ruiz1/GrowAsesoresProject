@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class ConsultasUsuario extends Conexion{
     public ConsultasUsuario(){}
     
-    public boolean autenticacionUsuarioNormal(String usuario, String clave){
+    public boolean autenticacionUsuario(String usuario, String clave){
         PreparedStatement pst = null;
         ResultSet rs = null;
         try{
@@ -75,4 +75,42 @@ public class ConsultasUsuario extends Conexion{
         }
         return false;
     }
+    
+    public boolean esAdmin(String usuario, String clave) {
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        boolean isAdmin = false;
+
+        try {
+            String consulta = "SELECT isAdmin FROM usuario WHERE correo = ? AND password = ?";
+            pst = getConexion().prepareStatement(consulta);
+            pst.setString(1, usuario);
+            pst.setString(2, clave);
+            rs = pst.executeQuery();
+
+            if (rs.next()) {
+                isAdmin = rs.getBoolean("isAdmin");
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error en la consulta SQL: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (getConexion() != null) {
+                    getConexion().close();
+                }
+            } catch (SQLException e) {
+                System.out.println("Error al cerrar la conexión: " + e.getMessage());
+            }
+        }
+
+        return isAdmin;
+    }
+
 }

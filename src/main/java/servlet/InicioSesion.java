@@ -41,10 +41,19 @@ public class InicioSesion extends HttpServlet {
         ConsultasUsuario sql = new ConsultasUsuario();
         System.out.println("Objeto consultas creado con exito");
         
-        if (sql.autenticacionUsuarioNormal(usuario, clave)) {
+        if (sql.autenticacionUsuario(usuario, clave)) {
             HttpSession objSesion = request.getSession(true);
             objSesion.setAttribute("usuario", usuario);
-            response.sendRedirect("index.jsp");
+            if(sql.esAdmin(usuario, clave)){
+                //HttpSession objSesion = request.getSession(true);
+                //objSesion.setAttribute("usuario", usuario);
+                response.sendRedirect("perfilUsuario.jsp");
+            }else{
+                //HttpSession objSesion = request.getSession(true);
+                //objSesion.setAttribute("usuario", usuario);
+                response.sendRedirect("perfilAdministrador.jsp");
+            }
+            
         } else {
             response.sendRedirect("index.jsp");
         }
