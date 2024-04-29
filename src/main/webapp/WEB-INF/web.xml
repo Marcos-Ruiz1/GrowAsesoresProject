@@ -9,12 +9,17 @@
         <servlet-class>servlet.InicioSesion</servlet-class>
     </servlet>
     <servlet>
+<<<<<<< HEAD
         <servlet-name>RegistraReservacion</servlet-name>
         <servlet-class>servlet.RegistraReservacion</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RegistrarReservacion</servlet-name>
         <servlet-class>servlet.RegistraReservacion</servlet-class>
+=======
+        <servlet-name>CerrarSesion</servlet-name>
+        <servlet-class>servlet.CerrarSesion</servlet-class>
+>>>>>>> 9ad9e47ce1a98374cdf43098912898203769d47d
     </servlet>
     <servlet-mapping>
         <servlet-name>RegistrarUsuario</servlet-name>
@@ -25,12 +30,17 @@
         <url-pattern>/iniciar</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+<<<<<<< HEAD
         <servlet-name>RegistraReservacion</servlet-name>
         <url-pattern>/registraresevacion</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegistrarReservacion</servlet-name>
         <url-pattern>/registraReservacion</url-pattern>
+=======
+        <servlet-name>CerrarSesion</servlet-name>
+        <url-pattern>/cerrar</url-pattern>
+>>>>>>> 9ad9e47ce1a98374cdf43098912898203769d47d
     </servlet-mapping>
     <session-config>
         <session-timeout>
