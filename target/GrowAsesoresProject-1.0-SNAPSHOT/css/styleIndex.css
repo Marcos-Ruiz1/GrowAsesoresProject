@@ -70,18 +70,6 @@ header > .img-container {
     width: 100%; 
 }
 
-.btn-container{
-
-    width: 100%;
- 
-}
-
-/*
-    Configuración de estilo para el botón del header
-*/
-
-
-
 header{
     height: 100%;
   
@@ -307,7 +295,7 @@ header{
 footer{
     background-color: black;
     height: 100px;
-}
+}   
 
 
 .testimonio-container{
@@ -376,6 +364,3 @@ footer{
     fill: #1577BE;
 }
 
-header{
-    background-color: white;
-}
