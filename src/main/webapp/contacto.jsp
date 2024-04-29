@@ -12,7 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleContacto.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--Iconos boobstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>GrowAsesores</title>
 </head>
 <body>
@@ -42,6 +44,9 @@
                              <li class="nav-item">
                              <a class="nav-link" href="contacto.jsp">Contacto</a>
                         </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal" href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                        </li>
         
                     </ul>
 
@@ -49,38 +54,40 @@
             </div>
         </nav>
     </header>
-  <!--Modal para Log In-->
-<div class="modal" id="myModal">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <!-- Modal Header -->
-    <div class="modal-header">
-      <h4 class="modal-title">Iniciar Sesión</h4>
-      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-    </div>
+  
+    <!--Modal para Log In-->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Iniciar Sesión</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
 
-    <!-- Modal body -->
-    <div class="modal-body">
-      <form>
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <i class="fa fa-user-circle-o" aria-hidden="true"></i><input type="email" name="txtUser" value="" placeholder="Correo" maxlength="" required> <br><br>
-            <i class="fa fa-key" aria-hidden="true"></i><input type="password" name="txtClave" value="" placeholder="Password" required> <br> <br>
-            <button type="submit" class="btn btn-outline-primary">Iniciar Sesión</button>
-          </div>
-          <div class="col-md-3"></div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="iniciar" method="post" name="Formulario de inicio de sesión">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <form>
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i><input type="email" name="txtUser" value="" placeholder="Correo" maxlength="" required> <br><br>
+                                <i class="fa fa-key" aria-hidden="true"></i><input type="password" name="txtClave" value="" placeholder="Password" required> <br> <br>
+                                <button type="submit" class="btn btn-outline-primary">Iniciar Sesión</button>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-      </form>
     </div>
-
-    <!-- Modal footer -->
-    <div class="modal-footer">
-      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-    </div>
-  </div>
-</div>
-</div>
 
     <!--Formulario-->
     <div class="container">

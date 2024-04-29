@@ -33,8 +33,8 @@ public class InicioSesion extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        String usuario = request.getParameter("usuario");
-        String clave = request.getParameter("pass");
+        String usuario = request.getParameter("txtUser");
+        String clave = request.getParameter("txtClave");
         System.out.println("Usuario: " +usuario);
         System.out.println("Clave: " +clave);
         
@@ -47,11 +47,11 @@ public class InicioSesion extends HttpServlet {
             if(sql.esAdmin(usuario, clave)){
                 //HttpSession objSesion = request.getSession(true);
                 //objSesion.setAttribute("usuario", usuario);
-                response.sendRedirect("perfilUsuario.jsp");
+                response.sendRedirect("usuarioReservacion.jsp");
             }else{
                 //HttpSession objSesion = request.getSession(true);
                 //objSesion.setAttribute("usuario", usuario);
-                response.sendRedirect("perfilAdministrador.jsp");
+                response.sendRedirect("adminView.jsp");
             }
             
         } else {
