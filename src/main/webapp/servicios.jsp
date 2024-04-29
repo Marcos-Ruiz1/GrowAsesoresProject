@@ -36,6 +36,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="conocenos.jsp">Conócenos</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="unirseInicial.jsp">Únete a nuestro equipo</a>
+                        </li>
+                             <li class="nav-item">
+                             <a class="nav-link" href="contacto.jsp">Contacto</a>
+                        </li> 
        
                     </ul>
 
