@@ -1,24 +1,75 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 18 mar. 2024, 20:05:17
-    Author     : xfs85
-*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap'); 
 
-.navbar {
-    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
- 
+
+body{
+    margin: 0;
+    padding: 0 ;
 }
 
-body,
-.navbar,
-.navbar-expand-lg .navbar-nav .nav-link,
-.container text-center{
-    color: white;
+/*
+    Configuración para el header
+*/
+header{
+    background-color: #1E1E1E;
+    display: flex;
+    align-items: center;
+    color:white; 
+    text-decoration: none;
+    height: 100%;
     
 }
+
+/* Esconde el menú desplegable para móviles*/
+.dropdown-header-nav{
+    display: none;
+}
+
+/*
+    Configuraciones para el logo del header
+*/
+
+header > .img-container {
+   width: 100%;
+   
+}
+
+.navbar-options li a{
+    color:#1577BE;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.navbar-login-text li a{
+    color:#1577BE;
+    font-size: 200%;
+    font-weight: bold;
+    margin-right: 0%;
+}
+
+.navbar-options li a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.navbar-login-text li a:hover{
+    color:white;
+}
+.img-container > img{
+    width: 80%;
+}
+
+/*
+    Configuración para el nav del header
+*/
+.header-nav{
+
+    width: 100%;
+    height: 100%;
+}
+
+.navbar{
+    width: 100%; 
+}
+
 body{
     background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
    

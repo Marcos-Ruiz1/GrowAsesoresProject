@@ -36,10 +36,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="conocenos.jsp">Conócenos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Blog</a>
-                        </li>        
-            
+       
                     </ul>
 
                 </div>
