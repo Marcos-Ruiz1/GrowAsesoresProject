@@ -17,19 +17,24 @@ public class Usuario {
     private String telefono;
     private String correoElectronico;
     private String contraseña;
+    private boolean isAdmin;
     
     public Usuario(){
         
     }
 
-    public Usuario(String nombres, String apellidoPaterno, String apellidoMaterno, String telefono, String correoElectronico, String contraseña) {
+    public Usuario(String nombres, String apellidoPaterno, String apellidoMaterno, String telefono, String correoElectronico, boolean isAdmin) {
         this.nombres = nombres;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
         this.telefono = telefono;
         this.correoElectronico = correoElectronico;
-        this.contraseña = contraseña;
+        this.isAdmin = isAdmin;
     }
+
+    
+
+    
 
     public int getId() {
         return id;
@@ -85,6 +90,15 @@ public class Usuario {
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
+    }
+
+ 
+    public boolean isIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
     
     

@@ -79,14 +79,14 @@
         <div class="leftColumn">
             <h2> Regístrate en GROW </h2>
             <div class="form">        
-                <form name="Formulario de Registro">
+                <form action="nuevousuario" method="post" name="Formulario de Registro">
                     <input type="text" name="Nombre" value="" placeholder="Nombre(s)" required=""/> <br><br>
-                    <input type="text" name="ApellidoM" value="" placeholder="Apellido Paterno" required=""/><br><br>
-                    <input type="text" name="ApellidoP" value="" placeholder="Apellido Materno" required=""/><br><br>
+                    <input type="text" name="ApellidoP" value="" placeholder="Apellido Paterno" required=""/><br><br>
+                    <input type="text" name="ApellidoM" value="" placeholder="Apellido Materno" required=""/><br><br>
                     <input type="text" name="Telefono" value="" placeholder="Telefono" required=""/><br><br>
-                    <input type="email" name="Nombre" value="" placeholder="Correo Electrónico" required=""/><br><br>
-                    <input type="password" name="Nombre" value="" placeholder="Contraseña" required=""/><br><br>
-                    <input type="password" name="Nombre" value="" placeholder="Confirmar contraseña" required=""/><br><br>
+                    <input type="email" name="Email" value="" placeholder="Correo Electrónico" required=""/><br><br>
+                    <input type="password" name="Contraseña" value="" placeholder="Contraseña" required=""/><br><br>
+                    <input type="password" name="Contraseña" value="" placeholder="Confirmar contraseña" required=""/><br><br>
                     <h6> Curriculum Vitae (opcional)</h6>
                     <label for="cvUpload" class="fileLabel">Arrastra o haz clic aquí para subir tu CV</label>
                     <input type="file" id="cvUpload" name="cvUpload" class="fileInput"><br> <br>

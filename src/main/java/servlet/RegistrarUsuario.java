@@ -4,6 +4,7 @@
  */
 package servlet;
 
+import controlador.ConsultasUsuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -30,20 +31,25 @@ public class RegistrarUsuario extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegistrarUsuario</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RegistrarUsuario at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        } finally {
-            out.close();
+        
+        //Variables del formulario
+        String nombres = request.getParameter("Nombre");
+        String apellidoP = request.getParameter("ApellidoP");
+        String apellidoM = request.getParameter("ApellidoM");
+        String telefono = request.getParameter("Telefono");
+        String email = request.getParameter("Email");
+        String clave = request.getParameter("Contraseña");
+        
+        
+        ConsultasUsuario sql = new ConsultasUsuario();
+        System.out.println("Objeto consultas creado con exito");
+        
+        if(sql.registrar(nombres, apellidoP, apellidoM, telefono, email, clave, false)){
+            response.sendRedirect("index.jsp");
+        }else{
+            response.sendRedirect("registrarse.jsp");
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
