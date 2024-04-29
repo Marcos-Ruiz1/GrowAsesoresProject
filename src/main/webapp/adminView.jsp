@@ -39,7 +39,7 @@
                                 <a class="nav-link" href="conocenos.jsp">Gestionar Cuenta</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="cerrar">Cerrar Sesión</a>
+                                <a class="nav-link" href="index.jsp">Cerrar Sesión</a>
                             </li>
                         </ul>
 

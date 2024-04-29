@@ -17,7 +17,7 @@ public class ConsultasUsuario extends Conexion{
         PreparedStatement pst = null;
         ResultSet rs = null;
         try{
-            String consulta = "select * from usuario where correo=? and password=?";
+            String consulta = "select * from usuario where correo = ? and password = ?";
             System.out.println("Consulta es: " + consulta);
             pst = getConexion().prepareStatement(consulta);
             pst.setString(1, usuario);
@@ -30,16 +30,8 @@ public class ConsultasUsuario extends Conexion{
             
         }catch(SQLException e){
             System.out.println("Error en: " +e.getMessage());
-        }finally{
-            try{
-                if(getConexion() != null)
-                    getConexion().close();
-                if(pst != null) pst.close();
-                if(rs != null) rs.close();
-            }catch(Exception e){
-                System.out.println("Error en: " +e);
-            }
         }
+        
         return false;
     }
     

@@ -75,9 +75,10 @@ public class RegistraReservacion extends HttpServlet {
         String motivo = request.getParameter("motivo");
         ConsultaReservacion sql = new ConsultaReservacion(); 
         String estado = "enviada"; 
-        int id_usuario = 1; 
+        
        
         if(sql.registrar(motivo,  estado)){
+            
            processRequest(request, response); 
         }
         
