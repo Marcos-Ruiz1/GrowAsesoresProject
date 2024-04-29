@@ -90,8 +90,8 @@
                     <input type="text" name="ApellidoM" value="" placeholder="Apellido Materno" required=""/><br><br>
                     <input type="text" name="Telefono" value="" placeholder="Telefono" required=""/><br><br>
                     <input type="email" name="Email" value="" placeholder="Correo Electrónico" required=""/><br><br>
-                    <input type="password" name="Contraseña" value="" placeholder="Contraseña" required=""/><br><br>
-                    <input type="password" name="Contraseña" value="" placeholder="Confirmar contraseña" required=""/><br><br>
+                    <input type="password" name="pass" value="" placeholder="Contraseña" required=""/><br><br>
+                    
                     <h6> Curriculum Vitae (opcional)</h6>
                     <label for="cvUpload" class="fileLabel">Arrastra o haz clic aquí para subir tu CV</label>
                     <input type="file" id="cvUpload" name="cvUpload" class="fileInput"><br> <br>

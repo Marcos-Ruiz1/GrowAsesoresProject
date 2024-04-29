@@ -11,12 +11,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author marco
  */
-public class RegistrarUsuario extends HttpServlet {
+public class InicioSesion extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,24 +33,22 @@ public class RegistrarUsuario extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
-        //Variables del formulario
-        String nombres = request.getParameter("Nombre");
-        String apellidoP = request.getParameter("ApellidoP");
-        String apellidoM = request.getParameter("ApellidoM");
-        String telefono = request.getParameter("Telefono");
-        String email = request.getParameter("Email");
+        String usuario = request.getParameter("usuario");
         String clave = request.getParameter("pass");
-        
+        System.out.println("Usuario: " +usuario);
+        System.out.println("Clave: " +clave);
         
         ConsultasUsuario sql = new ConsultasUsuario();
         System.out.println("Objeto consultas creado con exito");
         
-        if(sql.registrar(nombres, apellidoP, apellidoM, telefono, email, clave, false)){
+        if (sql.autenticacionUsuarioNormal(usuario, clave)) {
+            HttpSession objSesion = request.getSession(true);
+            objSesion.setAttribute("usuario", usuario);
             response.sendRedirect("index.jsp");
-        }else{
-            response.sendRedirect("registrarse.jsp");
+        } else {
+            response.sendRedirect("index.jsp");
         }
-        
+        //"iniciar" en el action del form para acceder a este servlet
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
