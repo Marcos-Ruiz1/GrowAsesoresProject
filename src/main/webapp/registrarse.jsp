@@ -89,9 +89,11 @@
                     <input type="email" name="Email" value="" placeholder="Correo Electrónico" required=""/><br><br>
                     <input type="password" name="pass" value="" placeholder="Contraseña" required=""/><br><br>
                     
+                    <%-- 
                     <h6> Curriculum Vitae (opcional)</h6>
-                    <label for="cvUpload" class="fileLabel">Arrastra o haz clic aquí para subir tu CV</label>
+                    <label for="cvUpload" class="fileLabel">Arrastra o haz clic aquí para subir tu CV</label>                 
                     <input type="file" id="cvUpload" name="cvUpload" class="fileInput"><br> <br>
+                    --%>
                     <input class= "btnCrear" type="submit" value="Crear cuenta" name="btnCuenta" />
                 </form>
             

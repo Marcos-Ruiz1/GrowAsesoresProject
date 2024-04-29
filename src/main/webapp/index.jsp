@@ -31,12 +31,12 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-options">
                         <li class="nav-item">
                             <a class="nav-link" href="index.jsp">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicios.jsp">Servicios</a>
-                        </li>
+                        </li>                   
                         <li class="nav-item">
                             <a class="nav-link" href="conocenos.jsp">Conócenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="unirseInicial.jsp">Únete a nuestro equipo</a>
                         </li>
              
             
