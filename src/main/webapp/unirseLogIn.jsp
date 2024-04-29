@@ -16,29 +16,35 @@
     <title>Grow Asesores</title>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg header-navbar"
+         style="background-color: #1E1E1E;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="imagenes/imagotipogrow-10.png" alt="" width="200px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-options">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.jsp">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.jsp">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="conocenos.jsp">Conócenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Blog</a>
+                        </li>        
+            
+                    </ul>
 
-    <!--Navegador-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="imagenes/isotipoconsombragrow-21.png" alt="GrowAsesoresLogo"  class="img-fluid" width="90" height="30">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="index.html"></a>
-              <a class="nav-link" href="index.html">INICIO</a>
-              <a class="nav-link" href="servicios.html">SERVICIO</a>
-              <a class="nav-link" href="conocenos.html">CONÓCENOS</a>
-              <a class="nav-link" href="unirseInicial.html">UNETE A NUESTRO EQUIPO</a>
-
-              <a class="nav-link" href="contacto.html">CONTACTANOS</a>
+                </div>
             </div>
-          </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!--Modal para Log In-->
       <!-- The Modal -->
