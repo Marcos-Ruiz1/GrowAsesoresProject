@@ -54,6 +54,6 @@ public class SolicitudCita {
     public void setMotivo(String motivo) {
         this.motivo = motivo;
     }
-    
+
     
 }

@@ -53,10 +53,13 @@
 
         <div class="informacion-container">
             <div class="information">
-                <h1 class="main-text">Realiza una reservación</h1>
-                <input type="time" class="horario" name="horario" placeholder="Ingresa horario de preferencia"> <br><br><br>
-                <input type="text" class="motivo" name="motivo" placeholder="¿Por qué quieres entrar a GROW?"> <br>
-                <button class="boton">subir</button>
+                <form action="registraReservacion" method="post">
+                    <h1 class="main-text">Realiza una reservación</h1>
+                    <input type="time" class="horario" name="horario" placeholder="Ingresa horario de preferencia"> <br><br><br>
+                    <input type="text" class="motivo" name="motivo" placeholder="¿Por qué quieres entrar a GROW?"> <br>
+                    <button class="boton">subir</button>
+                </form>
+
             </div>
 
         </div>

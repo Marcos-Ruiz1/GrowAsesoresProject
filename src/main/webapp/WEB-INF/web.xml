@@ -8,6 +8,14 @@
         <servlet-name>InicioSesion</servlet-name>
         <servlet-class>servlet.InicioSesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistraReservacion</servlet-name>
+        <servlet-class>servlet.RegistraReservacion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistrarReservacion</servlet-name>
+        <servlet-class>servlet.RegistraReservacion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistrarUsuario</servlet-name>
         <url-pattern>/nuevousuario</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/iniciar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistraReservacion</servlet-name>
+        <url-pattern>/registraresevacion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistrarReservacion</servlet-name>
+        <url-pattern>/registraReservacion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
