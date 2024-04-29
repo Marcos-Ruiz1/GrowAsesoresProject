@@ -9,7 +9,17 @@ body,
     color: white;
 }
 
+.navbar-nav a.nav-link {
+    transition: color 0.3s ease-in-out;
+  }
 
+  .navbar-nav a.nav-link:hover {
+   background: linear-gradient(to right, #43AED9, #2BC7D9, #30BFBF);
+   -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
 .blue-bg {
     background-color: #8DA4F5; /* Define el color de fondo azul */
     /*padding: 20px; /* Opcional: Añade espacio interno al contenedor */
@@ -131,7 +141,7 @@ body,
 
     width: 50%; 
     display: flex;
-      
+    margin-right: 100%;  
     margin-bottom: 5%;
     
 }
@@ -143,9 +153,8 @@ body,
     padding: 10%;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    margin-left: 40% ;
-    margin-right: 40%;
-
+    margin-left: 50% ;
+    margin-right: 50%;
     margin-bottom: 20%;
     font-size: 400%;
     font-weight: 600;
@@ -247,4 +256,9 @@ body,
         margin-left: 20%;
     }
     
+}
+
+/*Footer*/
+.customFooter{
+    background: linear-gradient(to right, #27418C, #2168A6, #43AED9, #2BC7D9, #30BFBF);
 }
