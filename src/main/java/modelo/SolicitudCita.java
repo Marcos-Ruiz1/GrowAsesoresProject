@@ -18,6 +18,15 @@ public class SolicitudCita {
         
     }
 
+    public SolicitudCita(int id, String estado, String motivo) {
+        this.id = id;
+        this.estado = estado;
+        this.motivo = motivo;
+    }
+
+    
+    
+    
     public SolicitudCita(String estado, String horarioPreferido) {
         this.estado = estado;
         this.horarioPreferido = horarioPreferido;

@@ -17,7 +17,6 @@
         <servlet-name>RegistrarReservacion</servlet-name>
         <servlet-class>servlet.RegistraReservacion</servlet-class>
 
-
     </servlet>
     <servlet-mapping>
         <servlet-name>RegistrarUsuario</servlet-name>

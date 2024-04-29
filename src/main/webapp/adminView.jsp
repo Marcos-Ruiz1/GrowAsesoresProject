@@ -4,6 +4,9 @@
     Author     : xfs85
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="modelo.SolicitudCita"%>
+<%@page import="modelo.SolicitudCita"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -48,87 +51,95 @@
 
         <div class="title">
             <br><h2>Solicitudes Realizadas</h2><br>
+            
+
+
         </div>    
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nombre del aspirante</th>
-                    <th scope="col">Fecha de preferencia</th>
-                    <th scope="col">Motivo</th>
-                    <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr data-id="1">
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>
-                        <button onclick="openModal('1')">Asignar Cita</button>
-                        <button onclick="deleteRow('1')">Eliminar</button>
-                    </td>
-                </tr>
-                <tr data-id="2">
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>
-                        <button onclick="openModal('2')">Asignar cita</button>
-                        <button onclick="deleteRow('2')">Eliminar</button>
-                    </td>
-                </tr>
-                <tr data-id="3">
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>
-                        <button onclick="openModal('3')">Asignar cita</button>
-                        <button onclick="deleteRow('3')">Eliminar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Motivo</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody></tbody> <!-- Aquí se agregarán las filas dinámicamente -->
+</table>
 
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <input type="datetime-local" id="fecha-y-hora">
-                <textarea id="cuadro-de-texto" placeholder="Escribe aquí..."></textarea>
-            </div>
-        </div>
+<button onclick="loadTable()">Cargar Tabla</button>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <input type="datetime-local" id="fecha-y-hora">
+        <textarea id="cuadro-de-texto" placeholder="Escribe aquí..."></textarea>
+    </div>
+</div>
+
+<script>
+   function loadTable() {
+    fetch("/ConsultarSolicitudes", {
+        method: 'GET',
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al cargar la tabla');
+        }
+        return response.json().toString(); // Convertir la respuesta a JSON
+    })
+    .then(data => {
+        updateTable(data); // Llamar a la función para actualizar la tabla con los datos recibidos
+    })
+    .catch(error => {
+        console.error(error);
+    });
+}
 
 
-        <script>
-            // Funciones para manejar la apertura y cierre del modal
-            function openModal(id) {
-                var modal = document.getElementById("myModal");
-                modal.style.display = "block";
-                // Aquí puedes añadir lógica para cargar los datos del aspirante correspondiente al ID pasado como parámetro
-            }
+    function updateTable(data) {
+        var tableBody = document.querySelector('.table tbody');
+        tableBody.innerHTML = '';
 
-            function closeModal() {
-                var modal = document.getElementById("myModal");
-                modal.style.display = "none";
-            }
+        data.forEach(solicitud) => {
+            var row = `<tr>
+                          <td>${solicitud.motivo}</td>
+                          <td>${solicitud.estado}</td>
+                          <td>
+                              <button onclick="openModal('${solicitud.id}')">Asignar Cita</button>
+                              <button onclick="deleteRow('${solicitud.id}')">Eliminar</button>
+                          </td>
+                      </tr>`;
+            tableBody.innerHTML += row;
+        });
+    }
 
-            // Función para eliminar una fila de la tabla
-            function deleteRow(id) {
-                // Obtener la fila correspondiente al ID
-                var row = document.querySelector("tr[data-id='" + id + "']");
+    // Funciones para manejar la apertura y cierre del modal
+    function openModal(id) {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+        // Aquí puedes añadir lógica para cargar los datos del aspirante correspondiente al ID pasado como parámetro
+    }
 
-                // Verificar si se encontró la fila
-                if (row) {
-                    // Eliminar la fila del DOM
-                    row.parentNode.removeChild(row);
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    function deleteRow(id) {
+        if (confirm("¿Estás seguro de que deseas eliminar esta reserva?")) {
+            fetch('/eliminar-reserva?id=' + id, {
+                method: 'DELETE',
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.reload();
                 } else {
-                    console.log("No se encontró ninguna fila con el ID: " + id);
+                    console.error('Error al eliminar la reserva');
                 }
-            }
-        </script>
+            });
+        }
+    }
+</script>
     </body>
 </html>

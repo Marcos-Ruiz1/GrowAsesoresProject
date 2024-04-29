@@ -5,7 +5,11 @@
 package controlador;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import modelo.SolicitudCita;
 
 /**
  *
@@ -38,6 +42,42 @@ public class ConsultaReservacion extends Conexion {
             }
         }
         return false;
+    }
+    
+    public List<SolicitudCita> consultarSolicitudes() {
+        List<SolicitudCita> solicitudes = new ArrayList<>();
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        try {
+            String consulta = "SELECT motivo, estado FROM solicitud_cita";
+            pst = getConexion().prepareStatement(consulta);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                
+                String motivo = rs.getString("motivo");
+                String estado = rs.getString("estado");
+                
+                SolicitudCita solicitud = new SolicitudCita(motivo, estado);
+                solicitudes.add(solicitud);
+            }
+        } catch (SQLException e) {
+            System.err.println("Error en la consulta: " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (getConexion() != null) {
+                    getConexion().close();
+                }
+            } catch (SQLException e) {
+                System.out.println("Error SQL en: " + e.getMessage());
+            }
+        }
+        return solicitudes;
     }
 
 }

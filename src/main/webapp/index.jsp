@@ -76,7 +76,7 @@
                             <div class="col-md-6">
                                 <form>
                                 <i class="fa fa-user-circle-o" aria-hidden="true"></i><input type="email" name="txtUser" value="" placeholder="Correo" maxlength="" required> <br><br>
-                                <i class="fa fa-key" aria-hidden="true"></i><input type="password" name="txtClave" value="" placeholder="Password" required> <br> <br>
+                                <i class="fa fa-key" aria-hidden="true"></i><input type="password" name="txtClave" value="" placeholder="Password" required> <br> <br>                      
                                 <button type="submit" class="btn btn-outline-primary">Iniciar Sesión</button>
                             </div>
                             <div class="col-md-3"></div>
