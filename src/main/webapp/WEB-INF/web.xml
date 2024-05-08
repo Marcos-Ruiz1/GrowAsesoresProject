@@ -9,14 +9,24 @@
         <servlet-class>servlet.InicioSesion</servlet-class>
     </servlet>
     <servlet>
-
         <servlet-name>RegistraReservacion</servlet-name>
         <servlet-class>servlet.RegistraReservacion</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RegistrarReservacion</servlet-name>
         <servlet-class>servlet.RegistraReservacion</servlet-class>
-
+    </servlet>
+    <servlet>
+        <servlet-name>EliminarUsuario</servlet-name>
+        <servlet-class>servlet.EliminarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarUsuario</servlet-name>
+        <servlet-class>servlet.ConsultarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ActualizarUsuario</servlet-name>
+        <servlet-class>servlet.ActualizarUsuario</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegistrarUsuario</servlet-name>
@@ -27,15 +37,25 @@
         <url-pattern>/iniciar</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-
         <servlet-name>RegistraReservacion</servlet-name>
         <url-pattern>/registraresevacion</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegistrarReservacion</servlet-name>
         <url-pattern>/registraReservacion</url-pattern>
-
-   </servlet-mapping>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarUsuario</servlet-name>
+        <url-pattern>/EliminarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarUsuario</servlet-name>
+        <url-pattern>/ConsultarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActualizarUsuario</servlet-name>
+        <url-pattern>/ActualizarUsuario</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

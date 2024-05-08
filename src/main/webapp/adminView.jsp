@@ -33,7 +33,7 @@
                                 <a class="nav-link" href="AdminView.jsp">Gestión Administrativa</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="servicios.jsp">Gestionar Usuarios</a>
+                                <a class="nav-link" href="gestionarUsuarios.jsp">Gestionar Usuarios</a>
                             </li>  
                             <li class="nav-item">
                                 <a class="nav-link" href="conocenos.jsp">Gestionar Cuenta</a>
@@ -80,15 +80,16 @@
 <script>
    function loadTable() {
     fetch("/ConsultarSolicitudes", {
-        method: 'GET',
+        method: 'GET'
     })
     .then(response => {
         if (!response.ok) {
             throw new Error('Error al cargar la tabla');
         }
-        return response.json().toString(); // Convertir la respuesta a JSON
+        return response.json(); // Convertir la respuesta a JSON
     })
     .then(data => {
+        console.log(data)
         updateTable(data); // Llamar a la función para actualizar la tabla con los datos recibidos
     })
     .catch(error => {
@@ -96,26 +97,94 @@
     });
 }
 
+function updateTable(data) {
+    let tableBody = document.querySelector('.table tbody');
+    console.log(tableBody);
+    tableBody.innerHTML = '';
+    console.log(data);
+    data.forEach((solicitud) => {
+        console.log(solicitud);
+        console.log(solicitud.horarioPreferido);
+        console.log(typeof solicitud.horarioPreferido);
+        let horarioPreferido = solicitud.horarioPreferido || '';
+        let estado = solicitud.estado;
+        let id = solicitud.id;
+        console.log(horarioPreferido);
 
+        // Crear los elementos de la tabla
+        let row = document.createElement('tr');
+        let tdHorario = document.createElement('td');
+        let tdEstado = document.createElement('td');
+        let tdButtons = document.createElement('td');
+        let buttonAsignar = document.createElement('button');
+        let buttonEliminar = document.createElement('button');
+
+        // Asignar los valores a los elementos
+        tdHorario.textContent = horarioPreferido;
+        tdEstado.textContent = estado;
+        buttonAsignar.textContent = 'Asignar Cita';
+        buttonEliminar.textContent = 'Eliminar';
+
+        // Asignar los eventos a los botones
+        buttonAsignar.onclick = function() { openModal(id); };
+        buttonEliminar.onclick = function() { deleteRow(id); };
+
+        // Agregar los elementos a la fila
+        tdButtons.appendChild(buttonAsignar);
+        tdButtons.appendChild(buttonEliminar);
+        row.appendChild(tdHorario);
+        row.appendChild(tdEstado);
+        row.appendChild(tdButtons);
+
+        // Agregar la fila al cuerpo de la tabla
+        tableBody.appendChild(row);
+    });
+}
+/*
     function updateTable(data) {
-        var tableBody = document.querySelector('.table tbody');
+        let tableBody = document.querySelector('.table tbody');
+        console.log(tableBody);
         tableBody.innerHTML = '';
-
-        data.forEach(solicitud) => {
+        console.log(data);
+        data.forEach((solicitud) => {
+    console.log(solicitud);
+    console.log(solicitud.horarioPreferido);
+    console.log(typeof solicitud.horarioPreferido);
+    let horarioPreferido = solicitud.horarioPreferido || '';
+    let estado = solicitud.estado;
+    let id = solicitud.id;
+    console.log(horarioPreferido);
+    let row = `<tr>
+                  <td>${horarioPreferido}</td>
+                  <td>${estado}</td>
+                  <td>
+                      <button onclick="openModal('${id}')">Asignar Cita</button>
+                      <button onclick="deleteRow('${id}')">Eliminar</button>
+                  </td>
+              </tr>`;
+    console.log(row);
+    tableBody.innerHTML += row;
+});
+        /*data.forEach((solicitud) => {
+            console.log(solicitud);
+            console.log(solicitud.horarioPreferido);
+            console.log(typeof solicitud.horarioPreferido);
             var row = `<tr>
-                          <td>${solicitud.motivo}</td>
+                          <td>${solicitud.horarioPreferido || ''}</td>
                           <td>${solicitud.estado}</td>
                           <td>
                               <button onclick="openModal('${solicitud.id}')">Asignar Cita</button>
                               <button onclick="deleteRow('${solicitud.id}')">Eliminar</button>
                           </td>
                       </tr>`;
+            console.log(row);
             tableBody.innerHTML += row;
         });
-    }
+    }*/
 
     // Funciones para manejar la apertura y cierre del modal
     function openModal(id) {
+        console.log(id);
         var modal = document.getElementById("myModal");
         modal.style.display = "block";
         // Aquí puedes añadir lógica para cargar los datos del aspirante correspondiente al ID pasado como parámetro
@@ -127,6 +196,7 @@
     }
 
     function deleteRow(id) {
+        console.log(id);
         if (confirm("¿Estás seguro de que deseas eliminar esta reserva?")) {
             fetch('/eliminar-reserva?id=' + id, {
                 method: 'DELETE',
