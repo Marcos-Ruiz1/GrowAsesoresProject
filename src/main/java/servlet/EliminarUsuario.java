@@ -4,13 +4,20 @@
  */
 package servlet;
 
+import controlador.ConsultasCitas;
+import controlador.ConsultasSolicitudes;
 import controlador.ConsultasUsuario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.SolicitudCita;
 
 /**
  *
@@ -76,6 +83,20 @@ public class EliminarUsuario extends HttpServlet {
         if (idString != null) {
             int id = Integer.parseInt(idString);
             ConsultasUsuario consultasUsuario = new ConsultasUsuario();
+            ConsultasSolicitudes consultasSolicitud = new ConsultasSolicitudes();
+            ConsultasCitas cc = new ConsultasCitas();
+             try {
+                 List<SolicitudCita> solicitudes = consultasSolicitud.obtenerSolicitudesPorId(id);
+                 if(!solicitudes.isEmpty()){
+                     for (SolicitudCita solicitud : solicitudes) {
+                         cc.eliminarCitaPorIdSolicitud(solicitud.getId());
+                     }
+                     consultasSolicitud.eliminarSolicitudesPorIdUsuario(id);
+                 }
+                 
+             } catch (SQLException ex) {
+                 Logger.getLogger(EliminarUsuario.class.getName()).log(Level.SEVERE, null, ex);
+             }
             consultasUsuario.eliminar(id);
         } else {
             // Manejar el caso en que no se proporcionó un ID
