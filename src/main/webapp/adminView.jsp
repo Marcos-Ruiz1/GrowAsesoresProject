@@ -76,19 +76,19 @@
         </div>
 
 
-       <div class="title">
-    <br><h2>Citas aceptadas</h2><br>
-    <table class="table" id="citas-aceptadas">
-        <thead>
-            <tr>
-                <th scope="col">Motivo</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Acciones</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
+        <div class="title">
+            <br><h2>Citas aceptadas</h2><br>
+            <table class="table" id="citas-aceptadas">
+                <thead>
+                    <tr>
+                        <th scope="col">Motivo</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
 
 
         <script>
@@ -112,49 +112,51 @@
             }
 
             function moveRowToAcceptedTable(row) {
-        let acceptedTableBody = document.querySelector('#citas-aceptadas tbody');
-        acceptedTableBody.appendChild(row);
-    }
+                let acceptedTableBody = document.querySelector('#citas-aceptadas tbody');
+                acceptedTableBody.appendChild(row);
+            }
 
-    function updateTable(data) {
-        let tableBody = document.querySelector('.table tbody');
-        tableBody.innerHTML = '';
-        data.forEach((solicitud) => {
-            let motivo = solicitud.motivo;
-            let estado = solicitud.estado;
-            let id = solicitud.id;
+            function updateTable(data) {
+                let tableBody = document.querySelector('.table tbody');
+                tableBody.innerHTML = '';
+                data.forEach((solicitud) => {
+                    let motivo = solicitud.motivo;
+                    let estado = solicitud.estado;
+                    let id = solicitud.id;
 
-            let row = document.createElement('tr');
-            let tdMotivo = document.createElement('td');
-            let tdEstado = document.createElement('td');
-            let tdButtons = document.createElement('td');
-            let buttonAsignar = document.createElement('button');
-            let buttonEliminar = document.createElement('button');
+                    let row = document.createElement('tr');
+                    let tdMotivo = document.createElement('td');
+                    let tdEstado = document.createElement('td');
+                    let tdButtons = document.createElement('td');
+                    let buttonAsignar = document.createElement('button');
+                    let buttonEliminar = document.createElement('button');
 
-            tdMotivo.textContent = motivo;
-            tdEstado.textContent = estado;
-            buttonAsignar.textContent = 'Asignar Cita';
-            buttonEliminar.textContent = 'Eliminar';
+                    tdMotivo.textContent = motivo;
+                    tdEstado.textContent = estado;
+                    buttonAsignar.textContent = 'Asignar Cita';
+                    buttonEliminar.textContent = 'Eliminar';
 
-            buttonAsignar.onclick = function () {
-                // Elimina la fila de la tabla actual
-                tableBody.removeChild(row);
-                // Llama a la función para mover la fila a la tabla de citas aceptadas
-                moveRowToAcceptedTable(row);
-            };
-            buttonEliminar.onclick = function () {
-                deleteRow(id);
-            };
+                    buttonAsignar.onclick = function () {
+                        // Elimina la fila de la tabla actual
+                        tableBody.removeChild(row);
+                        // Llama a la función para mover la fila a la tabla de citas aceptadas
+                        updateRow(id);
+                        moveRowToAcceptedTable(row);
 
-            tdButtons.appendChild(buttonAsignar);
-            tdButtons.appendChild(buttonEliminar);
-            row.appendChild(tdMotivo);
-            row.appendChild(tdEstado);
-            row.appendChild(tdButtons);
+                    };
+                    buttonEliminar.onclick = function () {
+                        deleteRow(id);
+                    };
 
-            tableBody.appendChild(row);
-        });
-    }
+                    tdButtons.appendChild(buttonAsignar);
+                    tdButtons.appendChild(buttonEliminar);
+                    row.appendChild(tdMotivo);
+                    row.appendChild(tdEstado);
+                    row.appendChild(tdButtons);
+
+                    tableBody.appendChild(row);
+                });
+            }
             // Funciones para manejar la apertura y cierre del modal
             function openModal(id) {
                 console.log(id);
@@ -183,8 +185,14 @@
                             });
                 }
             }
-            
-            
+
+            function updateRow(id) {
+                fetch('/ActualizarUsuario?id=' + id, {
+                    method: 'POST'
+                });
+            }
+
+
         </script>
     </body>
 </html>
