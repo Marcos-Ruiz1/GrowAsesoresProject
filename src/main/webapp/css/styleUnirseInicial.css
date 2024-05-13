@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
 
 
 body{
@@ -13,10 +13,10 @@ header{
     background-color: #1E1E1E;
     display: flex;
     align-items: center;
-    color:white; 
+    color:white;
     text-decoration: none;
     height: 100%;
-    
+
 }
 
 /* Esconde el menú desplegable para móviles*/
@@ -29,8 +29,8 @@ header{
 */
 
 header > .img-container {
-   width: 100%;
-   
+    width: 100%;
+
 }
 
 .navbar-options li a{
@@ -67,10 +67,10 @@ header > .img-container {
 }
 
 .navbar{
-    width: 100%; 
+    width: 100%;
 }
 
-  
+
 .blue-bg {
     background-color: #8DA4F5; /* Define el color de fondo azul */
     /*padding: 20px; /* Opcional: Añade espacio interno al contenedor */
@@ -161,17 +161,18 @@ header > .img-container {
     width: 100%;
     height: 100%;
     display: block;
-    
+
 }
 .postularse-container{
     display: flex;
     width: 100%;
     height: 100%;
     margin-top: 5%;
-    margin-bottom: 5%;  
-    margin-left: auto;  
-    margin-right: auto;
-   
+    margin-bottom: 5%;
+    margin-left: 50%;
+    margin-right: 50%;
+
+
 }
 
 
@@ -190,14 +191,14 @@ header > .img-container {
 
 .container-btn{
 
-    width: 50%; 
+    width: 50%;
     display: flex;
-    margin-right: 100%;  
+    margin-right: 100%;
     margin-bottom: 5%;
-    
+
 }
 .container-btn input[type="submit"] {
-    
+
     background-color: #30BFBF;
     border: 1px solid white;
     border-radius: 20px;
@@ -209,7 +210,7 @@ header > .img-container {
     margin-bottom: 20%;
     font-size: 400%;
     font-weight: 600;
-    
+
 }
 
 
@@ -224,41 +225,41 @@ header > .img-container {
 @media(max-width: 1400px){
 
     .postularse-container h1{
-      
+
         font-size: 300%;
-    
+
     }
 
-    
+
 }
 
 @media(max-width: 1900px){
     .container-btn input[type="submit"] {
-    
+
         font-size: 350%;
- 
-        
-    }   
+
+
+    }
 }
 
 @media(max-width: 1700px){
     .container-btn input[type="submit"] {
         font-size: 300%;
-        
-    }   
+
+    }
 }
 @media(max-width: 1500px){
     .container-btn input[type="submit"] {
         font-size: 250%;
-        
-    }   
+
+    }
 }
 @media(max-width: 1200px){
     .container-btn input[type="submit"] {
         font-size: 200%;
-       
-        
-    }   
+
+
+    }
 
 }
 
@@ -266,47 +267,47 @@ header > .img-container {
 
 @media(max-width: 740px){
     .postularse-container h1{
-      
+
         font-size: 200%;
-    
+
     }
     .container-btn input[type="submit"] {
-    
+
         font-size: 140%;
     }
-    
+
 }
 
 @media(max-width: 600px){
 
     .container-btn input[type="submit"] {
-    
+
         font-size: 110%;
-      
+
     }
-    
+
 }
 
 
 @media(max-width: 400px){
 
     .container-btn input[type="submit"] {
-    
+
         font-size: 95%;
-       
+
     }
-    
+
 }
 
 
 @media(max-width: 300px){
 
     .container-btn input[type="submit"] {
-    
+
         font-size: 95%;
         margin-left: 20%;
     }
-    
+
 }
 
 /*Footer*/
