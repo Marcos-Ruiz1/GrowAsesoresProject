@@ -1,7 +1,7 @@
 <%-- 
     Document   : usuarioReservacion
     Created on : 29 abr 2024, 03:14:28
-    Author     : waw
+    Author     : Marco Zazueta, Luis Contreras, Raul Luna
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -5,12 +5,16 @@
 package servlet;
 
 import controlador.ConsultaReservacion;
+import controlador.ConsultasUsuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import modelo.Usuario;
 
 /**
  *
@@ -29,19 +33,7 @@ public class RegistraReservacion extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegistraReservacion</title>");
-            out.println("</head>");
-            out.println("<body>");
-   
-            out.println("</body>");
-            out.println("</html>");
-        }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -73,15 +65,21 @@ public class RegistraReservacion extends HttpServlet {
             throws ServletException, IOException {
         String horario = request.getParameter("horario");
         String motivo = request.getParameter("motivo");
-        ConsultaReservacion sql = new ConsultaReservacion(); 
-        String estado = "enviada"; 
-        
-       
-        if(sql.registrar(motivo,  estado)){
-            
-           processRequest(request, response); 
+
+        HttpSession session = request.getSession(false);
+
+        ConsultaReservacion sql = new ConsultaReservacion();
+
+        int id_usuario = (Integer) session.getAttribute("id_usuario");
+
+        String estado = "enviada";
+
+        if (sql.registrar(horario, motivo, estado, id_usuario)) {
+
+            processRequest(request, response);
+            response.sendRedirect("indexLoggeado.jsp");
         }
-        
+
     }
 
     /**

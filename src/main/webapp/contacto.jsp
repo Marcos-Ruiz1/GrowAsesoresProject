@@ -1,7 +1,7 @@
 <%-- 
     Document   : contacto
     Created on : 28 abr. 2024, 20:09:20
-    Author     : marco
+    Author     : Marco Zazueta, Luis Contreras, Raul Luna
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

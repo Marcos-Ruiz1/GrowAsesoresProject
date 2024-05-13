@@ -3,47 +3,51 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controlador;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import modelo.Usuario;
+
 /**
  *
  * @author marco
  */
-public class ConsultasUsuario extends Conexion{
-    public ConsultasUsuario(){}
-    
-    public boolean autenticacionUsuario(String usuario, String clave){
+public class ConsultasUsuario extends Conexion {
+
+    public ConsultasUsuario() {
+    }
+
+    public boolean autenticacionUsuario(String usuario, String clave) {
         PreparedStatement pst = null;
         ResultSet rs = null;
-        try{
+        try {
             String consulta = "select * from usuario where correo = ? and password = ?";
             System.out.println("Consulta es: " + consulta);
             pst = getConexion().prepareStatement(consulta);
             pst.setString(1, usuario);
             pst.setString(2, clave);
             rs = pst.executeQuery();
-            
-            if(rs.next()){
+
+            if (rs.next()) {
                 return true;
             }
-            
-        }catch(SQLException e){
-            System.out.println("Error en: " +e.getMessage());
+
+        } catch (SQLException e) {
+            System.out.println("Error en: " + e.getMessage());
         }
-        
+
         return false;
     }
-    
-    public boolean registrar(String nombres, String apellidoPaterno, String apellidoMaterno, 
-            String telefono, String correoElectronico, String contraseña, boolean isAdmin){
+
+    public boolean registrar(String nombres, String apellidoPaterno, String apellidoMaterno,
+            String telefono, String correoElectronico, String contraseña, boolean isAdmin) {
         PreparedStatement pst = null;
-        try{
+        try {
             String consulta = "insert into usuario (nombre,apellidoPaterno,apellidoMaterno,telefono, correo,password,isAdmin) values(?,?,?,?,?,?,?)";
-            System.out.println("Consulta es: " +consulta);
+            System.out.println("Consulta es: " + consulta);
             pst = getConexion().prepareStatement(consulta);
             pst.setString(1, nombres);
             pst.setString(2, apellidoPaterno);
@@ -52,25 +56,28 @@ public class ConsultasUsuario extends Conexion{
             pst.setString(5, correoElectronico);
             pst.setString(6, contraseña);
             pst.setBoolean(7, isAdmin);
-        
-            
-            if(pst.executeUpdate() == 1){
+
+            if (pst.executeUpdate() == 1) {
                 return true;
             }
-            
-        }catch(SQLException e){
-            System.err.println("Error en la consulta: " +e.getMessage());
-        }finally{
-            try{
-                if(getConexion() != null) getConexion().close();
-                if(pst != null) pst.close();
-            }catch(SQLException e){
-                System.out.println("Error SQL en: " +e.getMessage());
+
+        } catch (SQLException e) {
+            System.err.println("Error en la consulta: " + e.getMessage());
+        } finally {
+            try {
+                if (getConexion() != null) {
+                    getConexion().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+            } catch (SQLException e) {
+                System.out.println("Error SQL en: " + e.getMessage());
             }
         }
         return false;
     }
-    
+
     public List<Usuario> obtenerUsuariosNoAdmin() {
         PreparedStatement pst = null;
         ResultSet rs = null;
@@ -115,7 +122,7 @@ public class ConsultasUsuario extends Conexion{
 
         return usuarios;
     }
-    
+
     public boolean actualizar(int id, String nombre, String apellidoPaterno, String apellidoMaterno, String telefono, String correo) {
         PreparedStatement pst = null;
         try {
@@ -147,7 +154,7 @@ public class ConsultasUsuario extends Conexion{
         }
         return false;
     }
-    
+
     public boolean eliminar(int id) {
         PreparedStatement pst = null;
         try {
@@ -175,7 +182,7 @@ public class ConsultasUsuario extends Conexion{
         }
         return false;
     }
-    
+
     public boolean esAdmin(String usuario, String clave) {
         PreparedStatement pst = null;
         ResultSet rs = null;
@@ -211,6 +218,60 @@ public class ConsultasUsuario extends Conexion{
         }
 
         return isAdmin;
+    }
+
+    public int consultaUsuarioConCredenciales(String usuario, String clave) {
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        try {
+            String consulta = "select * from usuario where correo = ? and password = ?";
+            System.out.println("Consulta es: " + consulta);
+            pst = getConexion().prepareStatement(consulta);
+            pst.setString(1, usuario);
+            pst.setString(2, clave);
+            rs = pst.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("id_usuario");
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error en: " + e.getMessage());
+        }
+
+        return -1;
+    }
+
+    public Usuario consultaUsuarioConId(int id_usuario) {
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        try {
+            String consulta = "select * from usuario where id_usuario = ? ";
+            System.out.println("Consulta es: " + consulta);
+            pst = getConexion().prepareStatement(consulta);
+            pst.setInt(1, id_usuario);
+
+            rs = pst.executeQuery();
+
+            if (rs.next()) {
+                int id_usuario_encontrado = rs.getInt("id_usuario");
+                String nombre = rs.getString("nombre");
+                String apellidoPaterno = rs.getString("apellidoPaterno");
+                String apellidoMaterno = rs.getString("apellidoMaterno");
+                String telefono = rs.getString("telefono");
+                String correo = rs.getString("correo");
+                String password = rs.getString("password");
+                
+                Usuario usuarioEncontrado = new Usuario(id_usuario, nombre, apellidoPaterno, apellidoMaterno, telefono, correo, password, false); 
+                return usuarioEncontrado;
+            }
+            
+            
+        } catch (SQLException e) {
+            System.out.println("Error en: " + e.getMessage());
+        }
+
+        return null;
     }
 
 }

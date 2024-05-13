@@ -23,6 +23,17 @@ public class Usuario {
         
     }
 
+    public Usuario(int id, String nombres, String apellidoPaterno, String apellidoMaterno, String telefono, String correoElectronico, String contraseña, boolean isAdmin) {
+        this.id = id;
+        this.nombres = nombres;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
+        this.telefono = telefono;
+        this.correoElectronico = correoElectronico;
+        this.contraseña = contraseña;
+        this.isAdmin = isAdmin;
+    }
+
     public Usuario(String nombres, String apellidoPaterno, String apellidoMaterno, String telefono, String correoElectronico, boolean isAdmin) {
         this.nombres = nombres;
         this.apellidoPaterno = apellidoPaterno;

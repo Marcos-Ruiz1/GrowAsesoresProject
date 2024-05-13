@@ -1,7 +1,7 @@
 <%-- 
     Document   : gestionarUsuarios
     Created on : 8 may. 2024, 00:29:24
-    Author     : marco
+    Author     : Marco Zazueta, Luis Contreras, Raul Luna
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

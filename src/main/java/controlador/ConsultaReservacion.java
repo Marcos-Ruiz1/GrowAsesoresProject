@@ -17,14 +17,17 @@ import modelo.SolicitudCita;
  */
 public class ConsultaReservacion extends Conexion {
 
-    public boolean registrar(String motivo, String estado) {
+    public boolean registrar(String horario, String motivo, String estado, int id_usuario) {
         PreparedStatement pst = null;
         try {
-            String consulta = "INSERT INTO solicitud_cita (motivo, estado) VALUES (?, ?)";
+            String consulta = "INSERT INTO solicitud_cita (horario, motivo, estado, id_usuario) VALUES (?, ?, ?, ?)";
             pst = getConexion().prepareStatement(consulta);
-            pst.setString(1, motivo);
-            pst.setString(2, estado);
-           
+            pst.setString(1, horario);
+
+            pst.setString(2, motivo);
+            pst.setString(3, estado);
+            pst.setInt(4, id_usuario);
+
             // Ejecutar la consulta y verificar si se ha insertado correctamente
             return pst.executeUpdate() == 1;
         } catch (SQLException e) {
@@ -43,7 +46,7 @@ public class ConsultaReservacion extends Conexion {
         }
         return false;
     }
-    
+
     public List<SolicitudCita> consultarSolicitudes() {
         List<SolicitudCita> solicitudes = new ArrayList<>();
         PreparedStatement pst = null;
@@ -53,10 +56,10 @@ public class ConsultaReservacion extends Conexion {
             pst = getConexion().prepareStatement(consulta);
             rs = pst.executeQuery();
             while (rs.next()) {
-                
+
                 String motivo = rs.getString("motivo");
                 String estado = rs.getString("estado");
-                
+
                 SolicitudCita solicitud = new SolicitudCita(motivo, estado);
                 solicitudes.add(solicitud);
             }

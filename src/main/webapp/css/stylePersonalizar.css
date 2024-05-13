@@ -1,0 +1,85 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 13 may 2024, 01:43:44
+    Author     : waw
+*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap'); 
+
+.navbar-options li a{
+    color:#1577BE;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.navbar-login-text li a{
+    color:#1577BE;
+    font-size: 200%;
+    font-weight: bold;
+    margin-right: 0%;
+}
+
+.navbar-options li a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.navbar-login-text li a:hover{
+    color:white;
+}
+.wrapper-main-banner{
+    display:flex;
+    height: 100%;
+
+}
+.info-cuenta{
+    margin-left: 10%;
+    margin-top: 3%;
+    width:50%;
+}
+
+
+.cuadro-lateral{
+
+    background-color: #1577BE   ;
+    width: 50%;
+
+}
+
+.icon-editar{
+
+    float:right;
+    margin-right: 30%;
+}
+
+.title-cuenta{
+
+    font-size: 500%;
+    margin-bottom: 5%;
+    color: #1577BE;
+
+}
+
+#nombre:hover{
+    cursor: pointer;
+}
+#apellidopaterno:hover{
+    cursor: pointer;
+}
+#apellidomaterno:hover{
+    cursor: pointer;
+}
+#correo:hover{
+    cursor: pointer;
+}
+#password:hover{
+    cursor: pointer;
+}
+#telefono:hover{
+    cursor: pointer;
+}
+
+.label-text{
+    color:#1577BE;
+}

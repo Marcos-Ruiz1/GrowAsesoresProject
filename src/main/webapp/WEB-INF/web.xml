@@ -32,10 +32,7 @@
         <servlet-name>RegistrarUsuario</servlet-name>
         <url-pattern>/nuevousuario</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>InicioSesion</servlet-name>
-        <url-pattern>/iniciar</url-pattern>
-    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>RegistraReservacion</servlet-name>
         <url-pattern>/registraresevacion</url-pattern>

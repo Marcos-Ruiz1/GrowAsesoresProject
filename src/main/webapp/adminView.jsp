@@ -1,7 +1,7 @@
 <%-- 
     Document   : adminView
     Created on : 29 abr. 2024, 03:05:01
-    Author     : xfs85
+    Author     : Marco Zazueta, Luis Contreras, Raul Luna
 --%>
 
 <%@page import="java.util.List"%>

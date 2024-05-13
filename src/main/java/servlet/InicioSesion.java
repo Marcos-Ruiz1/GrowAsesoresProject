@@ -8,6 +8,7 @@ import controlador.ConsultasUsuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author marco
  */
+@WebServlet(name = "iniciar", urlPatterns = {"/iniciar"})
 public class InicioSesion extends HttpServlet {
 
     /**
@@ -43,7 +45,7 @@ public class InicioSesion extends HttpServlet {
         
         if (sql.autenticacionUsuario(usuario, clave)) {
             HttpSession objSesion = request.getSession(true);
-            objSesion.setAttribute("usuario", usuario);
+            objSesion.setAttribute("id_usuario", sql.consultaUsuarioConCredenciales(usuario, clave));
             if(sql.esAdmin(usuario, clave)){
                 //HttpSession objSesion = request.getSession(true);
                 //objSesion.setAttribute("usuario", usuario);
@@ -55,7 +57,7 @@ public class InicioSesion extends HttpServlet {
             }
             
         } else {
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("indexLoggeado.jsp");
         }
         //"iniciar" en el action del form para acceder a este servlet
     }
