@@ -68,12 +68,12 @@
                         // Puedes continuar con el procesamiento usando el usuario obtenido
                     } else {
                         // Redirigir al usuario o manejar el caso donde id_usuario no está en la sesión
-                        response.sendRedirect("unirseLogin.jsp"); // Asumiendo que 'login.jsp' es la página de inicio de sesión
+                        response.sendRedirect("index.jsp"); // Asumiendo que 'login.jsp' es la página de inicio de sesión
                         return;
                     }
                 } else {
                     // Manejar el caso donde la sesión no está activa
-                    response.sendRedirect("unirseLogin.jsp");
+                    response.sendRedirect("index.jsp");
                     return;
                 }
             %>
