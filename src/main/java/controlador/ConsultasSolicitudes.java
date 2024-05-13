@@ -59,6 +59,33 @@ public class ConsultasSolicitudes {
         return solicitudes;
     }
     
+    
+    public boolean actualizarSolicitudPorId(int idSolicitud) throws SQLException {
+    PreparedStatement pst = null;
+    
+    try {
+        // Consulta SQL para actualizar el estado de la solicitud
+        String query = "UPDATE solicitud_cita SET estado = ? WHERE id = ?";
+        pst = con.getConexion().prepareStatement(query);
+        pst.setString(1, "Aceptada");
+        pst.setInt(2, idSolicitud);
+        
+        int filasActualizadas = pst.executeUpdate();
+        
+        // Devuelve true si se actualizó al menos una fila, indicando que la actualización fue exitosa
+        return filasActualizadas > 0;
+    } finally {
+        // Cerrar recursos en orden inverso de apertura para evitar fugas de recursos
+        if (pst != null) {
+            pst.close();
+        }
+        if (con.getConexion() != null) {
+            con.getConexion().close();
+        }
+    }
+}
+
+    
     // Método para eliminar todas las solicitudes de un usuario por su ID
     public boolean eliminarSolicitudesPorIdUsuario(int idUsuario) throws SQLException {
         
