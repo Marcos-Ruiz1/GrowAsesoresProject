@@ -34,10 +34,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="gestionarUsuarios.jsp">Gestionar Usuarios</a>
-                            </li>  
-                            <li class="nav-item">
-                                <a class="nav-link" href="conocenos.jsp">Gestionar Cuenta</a>
-                            </li>
+                            </li>                             
                             <li class="nav-item">
                                 <a class="nav-link" href="index.jsp">Cerrar Sesión</a>
                             </li>
@@ -65,7 +62,6 @@
             <tbody></tbody> <!-- Aquí se agregarán las filas dinámicamente -->
         </table>
 
-        <button class="boton-cargar" onclick="loadTable()">Cargar Tabla</button>
 
         <div id="myModal" class="modal">
             <div class="modal-content">
@@ -92,6 +88,9 @@
 
 
         <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                loadTable(); // Llama a loadTable() cuando la página se carga
+            });
             function loadTable() {
                 fetch("/ConsultarSolicitudes", {
                     method: 'GET'
@@ -135,10 +134,13 @@
                     tdEstado.textContent = estado;
                     buttonAsignar.textContent = 'Asignar Cita';
                     buttonEliminar.textContent = 'Eliminar';
+                    buttonAsignar.classList.add("container-btn" );
+                    buttonEliminar.classList.add("container-btn");
 
                     buttonAsignar.onclick = function () {
                         // Elimina la fila de la tabla actual
                         tableBody.removeChild(row);
+                      
                         // Llama a la función para mover la fila a la tabla de citas aceptadas
                         updateRow(id);
                         moveRowToAcceptedTable(row);

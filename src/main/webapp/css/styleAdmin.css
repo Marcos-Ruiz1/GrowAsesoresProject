@@ -437,3 +437,17 @@ header{
   text-decoration: none;
   cursor: pointer;
 }
+
+.container-btn input[type="submit"] {
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 30px;
+        color: white;
+        padding: 5%; 
+        cursor: pointer;
+        margin-top: auto;
+        margin-left: -20%;
+        margin-right: -20%;
+        margin-top: 5%;
+        transition: background-color 0.3s, color 0.3s;
+}

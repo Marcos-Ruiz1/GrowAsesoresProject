@@ -27,14 +27,11 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-options">
                             <li class="nav-item">
-                                <a class="nav-link" href="AdminView.jsp">Gestión Administrativa</a>
+                                <a class="nav-link" href="adminView.jsp">Gestión Administrativa</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="servicios.jsp">Gestionar Usuarios</a>
+                                <a class="nav-link" href="gestionarUsuarios.jsp">Gestionar Usuarios</a>
                             </li>  
-                            <li class="nav-item">
-                                <a class="nav-link" href="conocenos.jsp">Gestionar Cuenta</a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.jsp">Cerrar Sesión</a>
                             </li>
@@ -61,7 +58,7 @@
             <tbody></tbody> <!-- Aquí se agregarán las filas dinámicamente -->
         </table>
         
-        <button id="btnRegistrarUsuario">Registrar Usuario</button>
+        
         
         <div id="myModal" class="modal">
             <div class="modal-content">

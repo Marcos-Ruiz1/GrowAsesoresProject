@@ -110,10 +110,6 @@
                 <img class="image-contained" src="imagenes/GROW THREE 112_websize.jpg" alt=""/>
                 <h1> Jesús Napoleón Bringas Pérez</h1>
                 <h6> Propietario de la Empresa</h6>
-                
-                <div class="container-btn">
-                    <input type="submit" value="Conoce Más" name="btnConocer" />     
-                </div>    
 
             </div>
             
@@ -123,9 +119,7 @@
                     <h1> Clara Eugenia Parada Sitten</h1>
                     <h6> Socia de la Empresa</h6>
           
-                <div class="container-btn">
-                    <input type="submit" value="Conoce Más" name="btnConocer" />     
-                </div>  
+  
 
             </div>
 
@@ -135,9 +129,6 @@
                     <h1> Abraham Bringas Contreras</h1>
                     <h6> Asesor</h6>   
   
-                <div class="container-btn">
-                    <input type="submit" value="Conoce Más" name="btnConocer" />     
-                </div>  
 
             </div>
         </div>

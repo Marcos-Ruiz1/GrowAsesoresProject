@@ -101,7 +101,7 @@ header > .img-container {
 .banner-text-container{
     display: flex;
     width: 100%;
-    margin-left: -100%;
+    margin-left: 0;
     margin-top: 55%;
     margin-bottom: 0%;
 }
