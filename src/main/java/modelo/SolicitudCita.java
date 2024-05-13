@@ -10,26 +10,26 @@ package modelo;
  */
 public class SolicitudCita {
     private int id;
+    private String horario;
     private String estado;
-    private String horarioPreferido;
     private String motivo;
+    private int id_usuario;
     
     public SolicitudCita(){
         
     }
 
-    public SolicitudCita(int id, String estado, String motivo) {
+    public SolicitudCita(String motivo, String estado){
+        this.motivo = motivo;
+        this.estado = estado;
+    }
+    
+    public SolicitudCita(int id, String horario, String estado, String motivo, int id_usuario) {
         this.id = id;
+        this.horario = horario;
         this.estado = estado;
         this.motivo = motivo;
-    }
-
-    
-    
-    
-    public SolicitudCita(String estado, String horarioPreferido) {
-        this.estado = estado;
-        this.horarioPreferido = horarioPreferido;
+        this.id_usuario = id_usuario;
     }
 
     public int getId() {
@@ -40,20 +40,20 @@ public class SolicitudCita {
         this.id = id;
     }
 
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
     public String getEstado() {
         return estado;
     }
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }
-
-    public String getHorarioPreferido() {
-        return horarioPreferido;
-    }
-
-    public void setHorarioPreferido(String horarioPreferido) {
-        this.horarioPreferido = horarioPreferido;
     }
 
     public String getMotivo() {
@@ -64,5 +64,14 @@ public class SolicitudCita {
         this.motivo = motivo;
     }
 
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
+    
     
 }
