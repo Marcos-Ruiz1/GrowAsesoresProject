@@ -20,7 +20,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!--Iconos boobstrap-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <title>Personalizar Perfil</title>
     </head>
     <body>
@@ -57,21 +56,57 @@
 
         <div class="wrapper-main-banner">
 
+
             <%
-                ConsultasUsuario sql = new ConsultasUsuario();
+                Usuario usuario = null;
                 HttpSession sessionActual = request.getSession(false);
-                int id_usuario = (int) sessionActual.getAttribute("id_usuario");
-                Usuario usuario = sql.consultaUsuarioConId(id_usuario);
+                if (sessionActual != null) {
+                    Integer id_usuario = (Integer) sessionActual.getAttribute("id_usuario");
+                    if (id_usuario != null) {
+                        ConsultasUsuario sql = new ConsultasUsuario();
+                        usuario = sql.consultaUsuarioConId(id_usuario);
+                        // Puedes continuar con el procesamiento usando el usuario obtenido
+                    } else {
+                        // Redirigir al usuario o manejar el caso donde id_usuario no está en la sesión
+                        response.sendRedirect("unirseLogin.jsp"); // Asumiendo que 'login.jsp' es la página de inicio de sesión
+                        return;
+                    }
+                } else {
+                    // Manejar el caso donde la sesión no está activa
+                    response.sendRedirect("unirseLogin.jsp");
+                    return;
+                }
             %>
             <div class="info-cuenta">
 
                 <h1 class="title-cuenta">Mi cuenta </h1>
-                <img  id="nombre" src="/icons/icon-editar.svg" class="icon-editar"/> <h1 class="label-nombre"><span class="label-text">Nombre:</span> <%= usuario.getNombres()%> </h1>
-                <img  id="apellidopaterno" src="/icons/icon-editar.svg" class="icon-editar"/> <h1 class="label-apellidopaterno"><span class="label-text">Apellido paterno: </span>  <%= usuario.getApellidoPaterno()%> </h1>
-                <img id="apellidomaterno"  src="/icons/icon-editar.svg" class="icon-editar"/><h1 class="label-apellidomaterno"><span class="label-text">Apellido materno: </span>   <%= usuario.getApellidoMaterno()%></h1>
-                <img id="correo"  src="/icons/icon-editar.svg" class="icon-editar"/><h1 class="label-correo"><span class="label-text">Correo:</span>  <%= usuario.getCorreoElectronico()%> </h1>
-                <img id="password" src="/icons/icon-editar.svg" class="icon-editar"/><h1  class="label-password"><span class="label-text">Contraseña:</span>   <%= usuario.getContraseña()%> </h1>
-                <img id="telefono" src="/icons/icon-editar.svg" class="icon-editar"/><h1  class="label-telefono"><span class="label-text">Telefono</span>  <%= usuario.getTelefono()%> </h1>  
+                <img id="editarNombre" src="/icons/icon-editar.svg" class="icon-editar"/>
+                <h1 class="label-nombre">
+                    <span class="label-text">Nombre:</span>
+                    <span id="nombreUsuario"><%= usuario.getNombres()%></span>
+                </h1>
+
+
+                <img  id="editarPaterno" src="/icons/icon-editar.svg" class="icon-editar"/>     
+                <h1 class="label-nombre">
+                    <span class="label-text">Apellido Paterno: </span>
+                    <span id="apellidoPaterno"><%= usuario.getApellidoPaterno()%></span>
+                </h1>
+                <img id="editarMaterno"  src="/icons/icon-editar.svg" class="icon-editar"/>
+                <h1 class="label-nombre">
+                    <span class="label-text">Apellido Materno: </span>
+                    <span id="apellidoMaterno"><%= usuario.getApellidoMaterno()%></span>
+                </h1>
+                <img id="editarPassword"  src="/icons/icon-editar.svg" class="icon-editar"/>
+                <h1 class="label-nombre">
+                    <span class="label-text">Contraseña: </span>
+                    <span id="password"><%= usuario.getContraseña()%></span>
+                </h1>
+                <img id="editarTelefono"  src="/icons/icon-editar.svg" class="icon-editar"/>
+                <h1 class="label-nombre">
+                    <span class="label-text">Telefono: </span>
+                    <span id="telefono"><%= usuario.getTelefono()%></span>
+                </h1>
 
             </div>
             <div class="cuadro-lateral">
@@ -79,30 +114,8 @@
 
             </div> 
 
-            <script>
 
-                document.getElementById("nombre").onclick = function () {
-                    alert("¡Hola! Esto es una alerta simple.");
-                };
-                document.getElementById("apellidopaterno").onclick = function () {
-                    alert("¡Hola! Esto es una alerta simple.");
-                };
-                document.getElementById("apellidomaterno").onclick = function () {
-                    alert("¡Hola! Esto es una alerta simple.");
-                };
-                document.getElementById("correo").onclick = function () {
-                    alert("¡Hola! Esto es una alerta simple.");
-                };
-                document.getElementById("password").onclick = function () {
-                    alert("¡Hola! Esto es una alerta simple.");
-                };
-                document.getElementById("telefono").onclick = function () {
-                    alert("¡Hola! Esto es una alerta simple.");
-                };
-
-
-            </script>    
-
+            <script src="js/actualizarUsuario.js"></script>
 
     </body>
 

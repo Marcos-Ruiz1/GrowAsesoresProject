@@ -261,12 +261,11 @@ public class ConsultasUsuario extends Conexion {
                 String telefono = rs.getString("telefono");
                 String correo = rs.getString("correo");
                 String password = rs.getString("password");
-                
-                Usuario usuarioEncontrado = new Usuario(id_usuario, nombre, apellidoPaterno, apellidoMaterno, telefono, correo, password, false); 
+
+                Usuario usuarioEncontrado = new Usuario(id_usuario, nombre, apellidoPaterno, apellidoMaterno, telefono, correo, password, false);
                 return usuarioEncontrado;
             }
-            
-            
+
         } catch (SQLException e) {
             System.out.println("Error en: " + e.getMessage());
         }
@@ -274,4 +273,79 @@ public class ConsultasUsuario extends Conexion {
         return null;
     }
 
+    public String actualizarNombre(String nuevoNombre, int id_usuario) {
+        String consulta = "UPDATE usuario SET nombre = ? WHERE id_usuario = ?";
+        try (PreparedStatement pst = getConexion().prepareStatement(consulta)) {
+            pst.setString(1, nuevoNombre);
+            pst.setInt(2, id_usuario);
+            int result = pst.executeUpdate();
+
+            return nuevoNombre; 
+        } catch (SQLException e) {
+            System.out.println("Error en: " + e.getMessage());
+            // Depending on your error handling policy, you might want to rethrow, wrap the exception, or log it
+        }
+        return "";
+    }
+    
+    
+    public String actualizarApellidoPaterno(String nuevoPaterno, int id_usuario) {
+        String consulta = "UPDATE usuario SET apellidoPaterno = ? WHERE id_usuario = ?";
+        try (PreparedStatement pst = getConexion().prepareStatement(consulta)) {
+            pst.setString(1, nuevoPaterno);
+            pst.setInt(2, id_usuario);
+            int result = pst.executeUpdate();
+
+            return nuevoPaterno; 
+        } catch (SQLException e) {
+            System.out.println("Error en: " + e.getMessage());
+            // Depending on your error handling policy, you might want to rethrow, wrap the exception, or log it
+        }
+        return "";
+    }
+    
+        public String actualizarApellidoMaterno(String nuevoMaterno, int id_usuario) {
+        String consulta = "UPDATE usuario SET apellidoMaterno = ? WHERE id_usuario = ?";
+        try (PreparedStatement pst = getConexion().prepareStatement(consulta)) {
+            pst.setString(1, nuevoMaterno);
+            pst.setInt(2, id_usuario);
+            int result = pst.executeUpdate();
+
+            return nuevoMaterno; 
+        } catch (SQLException e) {
+            System.out.println("Error en: " + e.getMessage());
+            // Depending on your error handling policy, you might want to rethrow, wrap the exception, or log it
+        }
+        return "";
+    }
+        public String actualizarPassword(String nuevoPassword, int id_usuario) {
+        String consulta = "UPDATE usuario SET password   = ? WHERE id_usuario = ?";
+        try (PreparedStatement pst = getConexion().prepareStatement(consulta)) {
+            pst.setString(1, nuevoPassword);
+            pst.setInt(2, id_usuario);
+            int result = pst.executeUpdate();
+
+            return nuevoPassword; 
+        } catch (SQLException e) {
+            System.out.println("Error en: " + e.getMessage());
+            // Depending on your error handling policy, you might want to rethrow, wrap the exception, or log it
+        }
+        return "";
+    }
+    
+        public String actualizarTelefono(String nuevoTelefono, int id_usuario) {
+        String consulta = "UPDATE usuario SET telefono = ? WHERE id_usuario = ?";
+        try (PreparedStatement pst = getConexion().prepareStatement(consulta)) {
+            pst.setString(1, nuevoTelefono);
+            pst.setInt(2, id_usuario);
+            int result = pst.executeUpdate();
+
+            return nuevoTelefono; 
+        } catch (SQLException e) {
+            System.out.println("Error en: " + e.getMessage());
+            // Depending on your error handling policy, you might want to rethrow, wrap the exception, or log it
+        }
+        return "";
+    }
+    
 }
